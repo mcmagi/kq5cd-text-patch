@@ -1,0 +1,92 @@
+Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio)
+3000	124 5	#at 130 30 #time 5	34	Graham... I've heard from Crispin!
+3001	220 0	#at 10 10 #time 5	37	Good! I was getting a little seasick!
+3002	220 3	#at 10 10 #time 4	18	Aye, aye, Captain!
+3003	220 11		12	Moooaaannnn!
+3004	120 5	#at 120 160 #dispose	8	Crispin!
+3005	(owl)		94	See how the path goes to the east up into the mountains? That's the route to Mordack's castle.
+3006	(owl)		79	If you follow the path to the south over the next rise you'll come to the town.
+3007	(owl)		49	See the road there? Back to the east is the town.
+3008	(owl)		62	You'll find a run-down inn if you follow the road to the west.
+3009	(owl)		60	If you walk to the south you'll run into the town bakehouse.
+3010	(owl)		54	There's nothing but a dark, scary forest to the north.
+3011	(owl)		36	Back to the east is Crispin's house.
+3012	(owl)		123	That's a dark, creepy forest that we ALL avoid! I've heard you can get lost in there; and maybe run into an evil old WITCH!
+3013	(owl)		32	Oh, Graham, that dog looks mean!
+3014	(owl)		61	Back down the road to the east you'll run into the bakehouse.
+3015	(owl)		47	There's nothing to the west but endless desert.
+3016	(owl)		76	I've never been here before, but I think this is the way over the mountains.
+3017	(owl)		57	Let's go, Graham! I'm cold and I want to get out of here!
+3018	(owl)		86	Isn't this a funny house, Graham? What kind of person would live in a place like this?
+3019	n/a		84	No, you keep it Graham. It's much too hard to hly and carry things at the same time.
+3020	(rm001)		48	Come ON, Graham! There's nothing here. Let's go!
+3021	1 12		92	That's Crispin's Universe Interpreter. Be careful! You might accidentally realign the stars!
+3022	1 15		83	Oh, don't bother with the cellar door; there's nothing there. Besides, it's locked.
+3023	(rm002)		49	There's nothing interesting around here. Come on!
+3024			0	
+3025	(rm003)		27	Let's DO something, Graham!
+3026	3 0		127	If you're going into town I'll just wait for you here. I had a nasty run-in with a big dog once and I feel much safer out here.
+3027	3 1	#at 20 20	28	Wait, Graham! Be careful...!
+3028	3 9		53	Come on, Graham! Don't waste your time with that cow!
+3029	3 11		133	If you follow this road along the river you'll come to the town bakehouse. You might find something delicious...I mean, useful there.
+3030	(rm006)		41	I'm getting bored, Graham. Let's move on.
+3031	6 0	#at 50 20 #time 4	31	I'll wait for you here, Graham.
+3032	6 1	#at 20 20 #time 3	20	No Graham, don't...!
+3033	(rm007)		41	You can see there's nothing here, Graham!
+3034	7 10		88	Let's say 'hello' to the young prince, Graham. He looks like he could use a cheering up.
+3035	(rm008)		61	We've got better things to do than stand around here, Graham!
+3036	8 3	#at 140 10 #width 160 #time 10	64	Thank goodness, Graham! I didn't know if I'd EVER see you again!
+3037	8 0	#at 8 101 #width 160 #time 8	56	Oh, no! I'M not going in there! Can't you read the sign?
+3038	8 2	#at 8 102 #width 160 #time 6	34	Go if you want to. I'll wait HERE!
+3039	8 4	#at 140 10 #width 160 #time 8	58	Oh, I'm glad to see you're okay! I was beginning to worry!
+3040	8 8	#at 10 10 #width 160 #time 14	95	Look at this sign, Graham. You'd better heed it. There's an old WITCH who lives in that forest!
+3041	(rm009)		41	Come on, Graham. Let's go someplace else!
+3042	9 18	#at 160 20 #time 4	22	What's wrong, Graham?!
+3043	9 24		61	What a sad song she plays. Let's try to cheer her up, Graham.
+3044	(rm010)		55	Let's get a move-on, Graham. There isn't anything here.
+3045	(rm011)		40	We've got things to do, Graham! Come on!
+3046	11 0	#at 20 20 #time 6	31	Watch out for the bear, Graham!
+3047	11 1	#at 20 20 #time 6	34	Oh, oh! Stay away from those bees!
+3048	11 2 / 12 0 / 13 0	#at 10 10 #time 10	158	There's nothing but a hot, dry desert further west. Most people avoid it, because there are bandits out there! If you insist on going, I'll wait for you HERE!
+3049	11 3 / 12 2 / 13 2	#at 20 100 #time 7	58	Well, there you are! I was just starting to get concerned!
+3050	11 5	#at 20 20 #time 3	13	No, don't...!
+3051			0	
+3052	12 4	#at 10 10 #time 4	43	Is that a new dance, Graham? The BUG-a-loo?
+3053	(rm013)		22	Let's move on, Graham!
+3054	13 1	#at 20 100 #time 7	56	Keep your eye on the gypsies, Graham. I don't trust 'em.
+3055	(rm027)		47	This is getting tedious, Graham. Can we go now?
+3056	27 0		52	I'll wait for you out here. I don't like that place.
+3057	(rm029),(rm035)		36	It's cold, Graham! Let's get moving!
+3058	29 1 / 31 0	#at 10 10 #time 5	31	No! Stay away from the edge...!
+3059	(rm030)		39	Let's look for another way around this!
+3060	30 2	#at 10 10 #time 5	31	Graham! Don't get too close...!
+3061	30 5	#at 10 10 #time 5	24	Oh...be careful, Graham!
+3062	(rm031)		26	There must be another way!
+3063	31 2	#at 10 10 #time 5	22	Do be careful, Graham!
+3064			0	
+3065	35 0	#at 10 10 #time 9	69	If you're going to go back to that dreaded yeti cave, I'll wait here!
+3066	(rm044)		42	Come on, Graham! Let's explore this beach!
+3067	44 0	#at 10 90 #time 5	64	Graham, where have you been? I've been looking all over for you!
+3068	(rm045)		49	I'm tired of this place. Let's go somewhere else.
+3069	45 0	#at 10 10 #time 8	54	Look Graham, there's a boat here! Maybe we can use it!
+3070	(rm046),(rm051),(hermit2)		46	Come on, Graham! Let's explore someplace else!
+3071	47 1	#time 8	38	Watch out, there's a hole in the boat!
+3072	40 1 / 47 2	#at 142 8 #width 160 #time 4	18	Graham! Watch out!
+3073	48 0	#time 6	54	Look, Graham! An island! Perhaps we should explore it.
+3074	49 1	67 -1 30 25 4	39	Graham, I don't like the looks of this!
+3075	49 3	67 10 50 25 3	16	Graham! Help me!
+3076	50 0	67 -1 10 25 5	34	Graham! (cough, cough) Help... me.
+3077	50 2	25 3 67 -1 10	29	Everywhere... (cough, cough).
+3078			0	
+3079	51 1	67 100 20 25 4	30	Help me, I'm caught! Oh, help!
+3080	51 3	67 100 20 25 3	19	Well, let me see...
+3081	51 4	67 100 20 25 7	45	I'm fine, Graham. Just a bit ruffled, is all.
+3082	51 12	67 10 10 25 8	65	I hate to say this, Graham, but...I don't like this place at all!
+3083	(rm052,rm053,rm054)		49	Come on, Graham! This place gives me the shivers!
+3084	52 0	67 10 10 25 5	37	I don't like this place. It's creepy.
+3085	53 1	67 10 10 25 6	59	Well, it looks like there's n-n-no way in. Let's turn back.
+3086	54 0	67 10 10 25 5	33	See? Dead end! Let's go back now!
+3087	54 3	67 10 10 25 7	78	You're crazy to go down into that dark hole; you don't know what's down there!
+3088	54 5	67 10 10 25 5	37	No...uh, mind if I wait for you here?
+3089	54 7	67 10 10 25 5	46	Yes...I'll be the lookout. Be careful, Graham!
+3090	89 1	67 10 10 25 5	40	Oh, no! Watch out for the rocks, Graham!

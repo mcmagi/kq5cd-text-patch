@@ -1,0 +1,904 @@
+Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio)
+5000			0	
+5001	204 22	#at 10 10 #dispose	10	Grandpapa?
+5002	204 23	#at 110 10 #dispose	15	Ja, my darling?
+5003	204 24	#at 10 10 #dispose	40	Can I keep this doll? I really like her.
+5004	204 25	#at 110 10 #dispose	144	Now, Katrina. You know these toys are for sale for other kinder. Besides, you've got plenty of dolls. You can play mit her, but just be careful.
+5005	204 26	#at 10 10 #dispose	44	All right, Grandpapa. I'll take care of her.
+5006	204 18	67 10 10 25 7	70	Come on in! Look around! Let me know if you're interested in anything.
+5007	204 19	67 10 10 25 7	62	That's a fine sled, isn't it? Any child would love to have it.
+5008	204 20	67 10 10 25 6	41	Yes. I was just admiring the workmanship.
+5009	204 21	67 10 10 25 7	44	Danke. If you'd like to buy it, let me know.
+5010	204 27	67 10 10 25 8	68	This is a fine little toyshop you have here. You must be very proud.
+5011	204 28	67 10 10 25 10	110	Danke, son. I've worked very hard at it over the jahres. But you know, you need to really love it... und I do.
+5012	204 29	67 10 10 25 5	38	Are most of these toys your creations?
+5013	204 30	67 10 10 25 10	82	Ja, most of them. But not all. Some my son made, some I bought, some I traded for.
+5014	204 31	67 10 10 25 5	21	You're very talented.
+5015	204 32	67 10 10 25 8	50	Danke, danke. Well, let me know if I can help you.
+5016	204 33	67 10 10 25 8	72	Wo did you get this wunderbar marionette? The craftmanship is excellent!
+5017	204 34	67 10 10 25 8	81	Well, I don't know if you'll believe me or not, but I got it from a little gnome.
+5018	204 35	67 10 10 25 6	38	I must have it! Can I buy it from you?
+5019	204 36	67 10 10 25 6	64	Actually, you may have it...IF you'll give me the sled in trade.
+5020	204 37	67 10 10 70 210 25 14	171	Why, of course! But I must tell you...I think I'm getting the better deal. I can always make another sled, but finding another marionette of this quality...ich weis nicht.
+5021	204 38	67 10 10 25 5	24	So, I can have the sled?
+5022	204 39	67 10 10 25 5	28	Ja, ja! Take it. It's yours.
+5023	204 40	67 10 10 25 5	52	Will you take a golden needle in trade for the sled?
+5024	204 41	67 10 10 25 10	127	Das is an awfully small needle, but... I'm in a generous mood today. Okay, why not! Go ahead and take the sled. It's all yours!
+5025	204 42	67 10 10 25 7	51	Will you take a golden heart in trade for the sled?
+5026	204 43	67 10 10 25 10	93	This beautiful golden heart is worth MUCH more than the little sled! Are you sure about this?
+5027	204 44	67 10 10 25 7	45	Yes, I'm sure. I would like to have the sled.
+5028	204 45	67 10 10 25 10	78	Well...okay. But I'm getting the MUCH better deal. Go ahead und take the sled.
+5029	204 46	67 10 10 25 7	48	Will you take a gold coin in trade for the sled?
+5030	204 47	67 10 10 25 10	80	This gold coin is worth MUCH more than the little sled! Are you sure about this?
+5031	204 48	67 10 10 25 7	45	Yes, I'm sure. I would like to have the sled.
+5032	204 49	67 10 10 25 10	78	Well...okay. But I'm getting the MUCH better deal. Go ahead und take the sled.
+5033	204 50	67 10 100 25 5	61	Thank you very much. I think I'll find this sled very useful.
+5034	204 52	67 10 10 25 4	19	Well, you enjoy it.
+5035	204 51	67 10 10 25 7	49	Well, you enjoy it. Und danke for the marionette.
+5036	204 57	67 10 10 25 6	38	Can I buy the sled with a silver coin?
+5037	204 58	67 10 10 25 8	88	Nein, I'm sorry. I'd love to sell it to you, but I'm afraid I need a bit more than that.
+5038	204 0	#at 90 10 #dispose	67	The shipment of carving wood hasn't come in yet. What should we do?
+5039	204 1	#at 90 10 #dispose	57	Papa, where did you put those new doll clothes Mama made?
+5040	204 2	#at 90 10 #dispose	57	Papa, Mama wants you to know that it is almost lunchtime.
+5041	204 3	#at 90 10 #dispose	61	I'm going to count up the cash receipts from yesterday, okay?
+5042	204 4	#at 90 10 #dispose	34	Is Katrina behaving herself, Papa?
+5043	204 5	#at 90 10 #dispose	30	Papa, wo is the puppet string?
+5044	204 6	#at 90 10 #dispose	87	Papa, don't forget Mr. Richards is coming by tomorrow to pick up the wagon for his son.
+5045	204 14	#at 90 10 #dispose	11	Okay, Papa,
+5046	204 15	#at 90 10 #dispose	13	I'll do that.
+5047	204 16	#at 90 10 #dispose	45	Okay, but let me know if she's bothering you.
+5048	204 17	#at 90 10 #dispose	5	Okay.
+5049	204 7	#at 10 10 #dispose	56	If it's not in by tomorrow I'll send you to the sawmill.
+5050	204 8	#at 10 10 #dispose	53	Look in the trunk upstairs. I think I put them there.
+5051	204 9	#at 10 10 #dispose	36	Okay, son. Tell her I'll be in soon.
+5052	204 10	#at 10 10 #dispose	24	That's a good idea, son.
+5053	204 11	#at 10 10 #dispose	40	She's fine, son. I've got my eye on her.
+5054	204 12	#at 10 10 #dispose	54	Hmmmm. I think it's in the small cupboard. Look there.
+5055	204 13	#at 10 10 #dispose	42	I haven't forgotten. It's all ready to go.
+5056			0	
+5057	91 0	#dispose #at 10 120	30	Where'd you find HIM, Minotta?
+5058	91 1	#dispose #at 120 120	52	We found him on the beach. Isn't he luscious? Yummm!
+5059	91 2	#dispose #at 10 120	74	I don't know... he doesn't look like MY type. What do YOU think, Cruleena?
+5060	90 1	#at 225 100 #width 70 #dispose	75	I think he looks too old and tough. I like my MEALS to be young and tender.
+5061	90 2	#at 220 10 #width 80 #dispose	68	Don't be so picky. I'm tired of fish. I haven't had a man in months.
+5062	90 3	#at 10 10 #width 120 #dispose	62	Yes, you did. I saw you steal a man off a raft just last week!
+5063	90 4	#at 220 10 #width 80 #dispose	74	Oh, he doesn't count! He was already picked over by the time I got to him!
+5064	90 5	#at 10 -1 #width 120 #dispose	32	Well, at least this one's fresh!
+5065	90 6	#at 10 10 #width 120 #dispose	53	I don't know about you girls... but I'm ready to eat!
+5066	90 7	#at 10 10 #width 120 #dispose	57	Oh, you're ALWAYS ready to eat. That's why you're so fat!
+5067	90 8	#at 225 100 #dispose	9	I am NOT!
+5068	90 9	#at 60 10 #dispose	12	You are TOO!
+5069	90 8	#at 225 100 #dispose	9	I am NOT!
+5070	90 9	#at 60 10 #dispose	12	You are TOO!
+5071	90 10	#at 10 -1 #width 120 #dispose	35	Oh, quit arguing, girls! Let's eat!
+5072	90 12	#at 10 10 #width 120 #dispose	35	What's he doing? What's that thing?
+5073	90 13	#at 225 100 #width 70 #dispose	27	I don't know but I want it!
+5074	90 14	#dispose	43	Hey, that's not fair! Let's get her, girls!
+5075	90 15	#dispose	21	What's that he's got?
+5076	90 16	#dispose	31	I don't know, and I don't CARE!
+5077	90 11	#at 10 -1 #width 120 #dispose	21	Trying to escape, eh?
+5078			0	
+5079			0	
+5080			0	
+5081			0	
+5082			0	
+5083	24 3	67 141 110 25 5	33	Please! Let me go...I beg of you!
+5084	24 4	67 8 105 25 7	46	Why should I do that? What will you do for me?
+5085	24 5	67 150 101 25 7	59	I'll show you the way out of the forest...if you let me go!
+5086	24 6	67 8 114 25 6	30	How do I know I can trust you?
+5087	24 7	67 144 101 25 7	48	I give you my word. An elf NEVER breaks his word
+5088	24 8	67 8 105 25 6	52	Well...it's against my better judgement, but...okay.
+5089	24 9	#at 110 140 #dispos	36	Move over, Rocky. You're in our way!
+5090	24 10	#at 30 30 #dispose	11	Uh...sorry.
+5091	24 15	67 8 106 25 4	19	Hello? Who's there?
+5092	24 16	67 8 106 25 5	36	I say...who's there? Please help me.
+5093	24 17	67 8 106 25 4	24	Please...oh, never mind.
+5094	24 2	#dispose	22	Drat! Just missed him!
+5095	81 0	#at 10 10 #dispose	19	Follow me! In here!
+5096	83 2	#at 8 157 #dispose	43	Hey! Over here! I've got something for you.
+5097	83 0	#at 112 8 #dispose	68	Follow that passage over there. It's the way out of the Dark Forest.
+5098	83 1	#at 113 96 #dispose	96	Thank you very much for all your help. I'm sure I'll be able to find a use for these fine shoes.
+5099	84 0	#at 111 127 #dispose	174	I never take anything without giving in return. For your generosity in giving me those exquisite emeralds I give you my finest pair of shoes. May they help you in your quest.
+5100			0	
+5101			0	
+5102			0	
+5103	6 3	#at 20 120 #width 270 #dispose	219	Oh, thank you, thank you, good sir! You saved my life! My children and I will never forget your kindness. Maybe someday I will be able to return the favor. Oh! I hear my children calling! Good-bye...until we meet again.
+5104	86 3	#at 10 150 #width 280 #dispose	95	I told you I'd repay your kindness when you saved me from that horrible cat. Good luck, friend.
+5105	35 1	67 20 20 25 8	56	Yonder's the crystal cave. There you will find the yeti.
+5106			0	
+5107	35 6	67 20 20 25 13	150	That is your problem...not mine. It has been decreed by Queen Icebella and I must carry out her wishes. Now, no more talking! Go! To the crystal cave!
+5108	35 4	67 20 20 25 8	78	I see that the yeti is dead. Queen Icebella will be pleased. Come...follow me.
+5109			0	
+5110			0	
+5111			0	
+5112			0	
+5113			0	
+5114			0	
+5115			0	
+5116			0	
+5117			0	
+5118			0	
+5119			0	
+5120			0	
+5121			0	
+5122			0	
+5123			0	
+5124			0	
+5125			0	
+5126			0	
+5127			0	
+5128			0	
+5129			0	
+5130			0	
+5131			0	
+5132			0	
+5133			0	
+5134			0	
+5135			0	
+5136			0	
+5137			0	
+5138			0	
+5139			0	
+5140			0	
+5141			0	
+5142			0	
+5143			0	
+5144			0	
+5145			0	
+5146			0	
+5147			0	
+5148			0	
+5149			0	
+5150			0	
+5151			0	
+5152			0	
+5153			0	
+5154			0	
+5155			0	
+5156			0	
+5157			0	
+5158			0	
+5159			0	
+5160			0	
+5161			0	
+5162			0	
+5163			0	
+5164			0	
+5165			0	
+5166			0	
+5167			0	
+5168			0	
+5169			0	
+5170			0	
+5171			0	
+5172			0	
+5173			0	
+5174			0	
+5175			0	
+5176			0	
+5177			0	
+5178			0	
+5179			0	
+5180			0	
+5181			0	
+5182			0	
+5183			0	
+5184			0	
+5185			0	
+5186			0	
+5187			0	
+5188			0	
+5189			0	
+5190			0	
+5191			0	
+5192			0	
+5193			0	
+5194			0	
+5195			0	
+5196			0	
+5197			0	
+5198			0	
+5199			0	
+5200	120 5	#at 120 160 #dispose	8	Crispin!
+5201	120 6	#at 40 70 #dispose	49	I have the solution to ALL your problems, Graham!
+5202	121 0	#at 10 135 #width 291 #dispose	205	While you and Cedric were gone, I did some asking around, and found out that YOUR son, Alexander, had the dubious distinction, if you may, of turning Mordack's brother, Mannanan, into a cat some time back.
+5203	121 1	#at 10 145 #width 291 #dispose	153	Obviously, this deed angered Mordack who could do nothing about it since this particular spell could only be undone by the actual perpetrator...your son.
+5204	121 2	#at 10 135 #width 291 #dispose	173	It doesn't take a great genius to figure out that Mordack took your family and castle in revenge and to try to `persuade' Alexander to restore Mannanan back to his old self.
+5205	121 3	#at 10 135 #width 291 #dispose	203	I DID discover, as now I see, that your castle and family were miniaturized and imprisoned inside a glass bottle. I did some research and found the spell for turning everything back to normal. Now watch!
+5206	120 7	#at 40 70 #dispose	22	Hocus, pocus, ALIOCUS!
+5207	120 8	#at 120 150 #dispose	46	Valanice! My children! My joy knows no limits!
+5208	120 9	#at 40 50 #dispose	36	Oh, Father! I'm so glad you're here!
+5209	120 10	#at 10 40 #dispose	62	Oh...Princess Cassima! How could I forget you! Come over here.
+5210	122 0	#at 9 119 #width 285 #dispose	308	Let me introduce you to my family. This is my wife, Queen Valanice; my daughter, Princess Rosella; and my son, Prince Alexander...who started this whole mess! All of you, this is Princess Cassima from the Land of the Green Isles. Without her, none of us would be standing here now. She bravely saved my life!
+5211	122 1	#at 8 146 #width 285 #dispose	147	My Lady. I am deeply in your debt and I will make it up to you. With your permission, I'd like to travel to the Land of the Green Isles to see you.
+5212	120 11	#at 120 140 #dispose	90	All right! Now that we're done with the formalities, let's get on with business, shall we?
+5213	120 12	#at 110 160 #dispose	26	Higgledy, piggledly, POOH!
+5214	120 13	#at 110 120 #dispose	166	Be assured that your castle is right back where it belongs...and the right size too! But NOW, it's time that everyone return to their homes...with MY help, of course.
+5215	120 14	#at 110 160 #dispose	28	Alakazam, alakazoo, ALAKA...
+5216	120 15	#at 10 50 #dispose	25	Wait! What about Cedric?!
+5217	120 16	#at 110 160 #dispose	16	Where IS Cedric?
+5218	120 17	#at 10 50 #dispose	79	Over there! Mordack may have killed him! Is there ANYTHING you can do about it?
+5219	120 18	#at 110 150 #dispose	46	Hmmmmm, let me think. Ah, yes! I think I know.
+5220	120 19	#at 110 150 #dispose	52	Abra...abracarbara...no. Uh, abra...codora...hmmmmm.
+5221	120 20	#at 110 160 #dispose	34	Now, what IS that confounded word!
+5222	120 21	#at 110 160 #dispose	8	Oh, yes!
+5223	120 22	#at 110 160 #dispose	15	Abra...cadabra!
+5224			0	
+5225	120 23	#at 110 160 #dispose	41	Cedric, it sure is good to see YOU again!
+5226	120 24	#at 180 80 #dispose	19	Likewise, I'm sure.
+5227	120 25	#at 110 150 #dispos	50	All right. Enough is enough. Let's get on with it.
+5228	120 26	#at 110 140 #dispose	82	Okay, Cassima. Let's send you home first. Wasn't that the Land of the Green Isles?
+5229			0	
+5230	120 28	#at 120 10 #dispose	32	You can be sure of that, m'lady.
+5231	120 29	#at 10 10 #dispose	192	Before you send us all home, Crispin, I just want to thank you for all your help. And, you too, Cedric. I wouldn't be standing here with my family without you two. I'm deeply, deeply grateful.
+5232	120 30	#at 110 150 #dispose	64	All in a day's work, my boy. All in a day's work. Right, Cedric?
+5233	120 31	#at 180 70 #dispose	15	Right, Crispin!
+5234	120 32	#at 110 160 #dispose	23	Okay, back home you go!
+5235	120 33	#at 110 160 #dispose	29	Alakazam, alakazoo, ALAKAZEE!
+5236	123 0	#at 10 10 #dispose	76	Well, there she is...our happy home. And we're all safe and sound once more.
+5237	123 1	#at 10 10 #dispose	24	Let's go home, shall we?
+5238	123 2	#at 100 100 #dispose	11	Yes, let's.
+5239			0	
+5240			0	
+5241			0	
+5242			0	
+5243			0	
+5244			0	
+5245			0	
+5246			0	
+5247			0	
+5248			0	
+5249			0	
+5250			0	
+5251			0	
+5252			0	
+5253			0	
+5254			0	
+5255			0	
+5256			0	
+5257			0	
+5258			0	
+5259			0	
+5260			0	
+5261			0	
+5262			0	
+5263			0	
+5264			0	
+5265			0	
+5266			0	
+5267			0	
+5268			0	
+5269			0	
+5270			0	
+5271			0	
+5272			0	
+5273			0	
+5274			0	
+5275			0	
+5276			0	
+5277			0	
+5278			0	
+5279			0	
+5280			0	
+5281			0	
+5282			0	
+5283			0	
+5284			0	
+5285			0	
+5286			0	
+5287			0	
+5288			0	
+5289			0	
+5290			0	
+5291			0	
+5292			0	
+5293			0	
+5294			0	
+5295			0	
+5296			0	
+5297			0	
+5298			0	
+5299			0	
+5300			0	
+5301			0	
+5302			0	
+5303			0	
+5304			0	
+5305			0	
+5306			0	
+5307			0	
+5308			0	
+5309			0	
+5310			0	
+5311			0	
+5312			0	
+5313			0	
+5314			0	
+5315			0	
+5316			0	
+5317			0	
+5318			0	
+5319			0	
+5320			0	
+5321			0	
+5322			0	
+5323			0	
+5324			0	
+5325			0	
+5326			0	
+5327			0	
+5328			0	
+5329			0	
+5330			0	
+5331			0	
+5332			0	
+5333			0	
+5334			0	
+5335			0	
+5336			0	
+5337			0	
+5338			0	
+5339			0	
+5340			0	
+5341			0	
+5342			0	
+5343			0	
+5344			0	
+5345			0	
+5346			0	
+5347			0	
+5348			0	
+5349			0	
+5350			0	
+5351			0	
+5352			0	
+5353			0	
+5354			0	
+5355			0	
+5356			0	
+5357			0	
+5358			0	
+5359			0	
+5360			0	
+5361			0	
+5362			0	
+5363			0	
+5364			0	
+5365			0	
+5366			0	
+5367			0	
+5368			0	
+5369			0	
+5370			0	
+5371			0	
+5372			0	
+5373			0	
+5374			0	
+5375			0	
+5376			0	
+5377			0	
+5378			0	
+5379			0	
+5380			0	
+5381			0	
+5382			0	
+5383			0	
+5384			0	
+5385			0	
+5386			0	
+5387			0	
+5388			0	
+5389			0	
+5390			0	
+5391			0	
+5392			0	
+5393			0	
+5394			0	
+5395			0	
+5396			0	
+5397			0	
+5398			0	
+5399			0	
+5400	85 0	67 20 20 25 10 70 260	117	You know dat job we pulled yesterday? Where's da rest of da loot...huh? I think one o' you guys is holdin' out on me!
+5401	85 2	67 20 20 25 8	63	Gentlemen, please excuse me. I didn't mean to interrupt your...
+5402	85 3	67 20 20 25 7	40	Da inn is full. Ain't got no more rooms.
+5403	85 4	#at 20 20 #dispose	81	Hey, boss! Dis guy looks like a real troublemaker! Whaddya want me ta do wid 'im?
+5404	85 5	#at 20 20 #dispose	12	Rub 'im out!
+5405	85 1	67 20 20 25 10 70 260	75	We gotta plan our next job, you guys. Hey! How did you get outta da cellar?
+5406	85 6	#at 20 20 #dispose	32	Dis time...rub 'im out for good!
+5407			0	
+5408			0	
+5409			0	
+5410			0	
+5411			0	
+5412			0	
+5413			0	
+5414			0	
+5415			0	
+5416			0	
+5417			0	
+5418			0	
+5419			0	
+5420			0	
+5421			0	
+5422			0	
+5423			0	
+5424			0	
+5425			0	
+5426			0	
+5427			0	
+5428			0	
+5429			0	
+5430			0	
+5431			0	
+5432			0	
+5433			0	
+5434			0	
+5435			0	
+5436			0	
+5437			0	
+5438			0	
+5439			0	
+5440			0	
+5441			0	
+5442			0	
+5443			0	
+5444			0	
+5445			0	
+5446			0	
+5447			0	
+5448			0	
+5449			0	
+5450			0	
+5451			0	
+5452			0	
+5453			0	
+5454			0	
+5455			0	
+5456			0	
+5457			0	
+5458			0	
+5459			0	
+5460			0	
+5461			0	
+5462			0	
+5463			0	
+5464			0	
+5465			0	
+5466			0	
+5467			0	
+5468			0	
+5469			0	
+5470			0	
+5471			0	
+5472			0	
+5473			0	
+5474			0	
+5475			0	
+5476			0	
+5477			0	
+5478			0	
+5479			0	
+5480			0	
+5481			0	
+5482			0	
+5483			0	
+5484			0	
+5485			0	
+5486			0	
+5487			0	
+5488			0	
+5489			0	
+5490			0	
+5491			0	
+5492			0	
+5493			0	
+5494			0	
+5495			0	
+5496			0	
+5497			0	
+5498			0	
+5499			0	
+5500	2 1	#at 10 20 #time 5	37	Graham, watch out! A poisonous snake!
+5501	2 2	#at 10 10 #time 8	34	Begone you slithery varmint! Scat!
+5502	2 5		33	Ssstay away! Thisss isss MY path!
+5503			0	
+5504			0	
+5505			0	
+5506			0	
+5507			0	
+5508			0	
+5509			0	
+5510			0	
+5511			0	
+5512			0	
+5513			0	
+5514			0	
+5515			0	
+5516			0	
+5517			0	
+5518			0	
+5519			0	
+5520			0	
+5521			0	
+5522			0	
+5523			0	
+5524			0	
+5525			0	
+5526			0	
+5527			0	
+5528			0	
+5529			0	
+5530			0	
+5531			0	
+5532			0	
+5533			0	
+5534			0	
+5535			0	
+5536			0	
+5537			0	
+5538			0	
+5539			0	
+5540			0	
+5541			0	
+5542			0	
+5543			0	
+5544			0	
+5545			0	
+5546			0	
+5547			0	
+5548			0	
+5549			0	
+5550			0	
+5551			0	
+5552			0	
+5553			0	
+5554			0	
+5555			0	
+5556			0	
+5557			0	
+5558			0	
+5559			0	
+5560			0	
+5561			0	
+5562			0	
+5563			0	
+5564			0	
+5565			0	
+5566			0	
+5567			0	
+5568			0	
+5569			0	
+5570			0	
+5571			0	
+5572			0	
+5573			0	
+5574			0	
+5575			0	
+5576			0	
+5577			0	
+5578			0	
+5579			0	
+5580			0	
+5581			0	
+5582			0	
+5583			0	
+5584			0	
+5585			0	
+5586			0	
+5587			0	
+5588			0	
+5589			0	
+5590			0	
+5591			0	
+5592			0	
+5593			0	
+5594			0	
+5595			0	
+5596			0	
+5597			0	
+5598			0	
+5599			0	
+5600	4 2	#at 80 100 #time 6	34	How goes it with you, good fellow?
+5601	4 3	#at 80 10 #time 9	64	Not well, I'm afraid. This old wagon's always giving me trouble.
+5602	4 4	#at 80 100 #time 6	26	Can I help you in any way?
+5603	4 5	#at 80 10 #time 6	46	Thank you kindly, but I think I can handle it.
+5604	4 6	#at 80 100 #time 6	26	All right then. Good luck.
+5605	4 7	#at 80 10 #time 7	43	Thanks. With this wagon, I'm gonna need it.
+5606	n/a	#at 80 10 #time 9	68	No need to help me, sir. I think I can fix the wagon. Thanks anyway.
+5607	n/a	#at 80 100 #time 6	20	Please, go away now!
+5608			0	
+5609			0	
+5610			0	
+5611			0	
+5612			0	
+5613			0	
+5614			0	
+5615			0	
+5616			0	
+5617			0	
+5618			0	
+5619			0	
+5620			0	
+5621			0	
+5622			0	
+5623			0	
+5624			0	
+5625			0	
+5626			0	
+5627			0	
+5628			0	
+5629			0	
+5630			0	
+5631			0	
+5632			0	
+5633			0	
+5634			0	
+5635			0	
+5636			0	
+5637			0	
+5638			0	
+5639			0	
+5640			0	
+5641			0	
+5642			0	
+5643			0	
+5644			0	
+5645			0	
+5646			0	
+5647			0	
+5648			0	
+5649			0	
+5650			0	
+5651			0	
+5652			0	
+5653			0	
+5654			0	
+5655			0	
+5656			0	
+5657			0	
+5658			0	
+5659			0	
+5660			0	
+5661			0	
+5662			0	
+5663			0	
+5664			0	
+5665			0	
+5666			0	
+5667			0	
+5668			0	
+5669			0	
+5670			0	
+5671			0	
+5672			0	
+5673			0	
+5674			0	
+5675			0	
+5676			0	
+5677			0	
+5678			0	
+5679			0	
+5680			0	
+5681			0	
+5682			0	
+5683			0	
+5684			0	
+5685			0	
+5686			0	
+5687			0	
+5688			0	
+5689			0	
+5690			0	
+5691			0	
+5692			0	
+5693			0	
+5694			0	
+5695			0	
+5696			0	
+5697			0	
+5698			0	
+5699			0	
+5700			0	
+5701	n/a	#at 150 20 #time 3 #dispose	9	Good day!
+5702	n/a	#at 150 20 #time 3 #dispose	6	Hello!
+5703	n/a	#at 150 20 #time 3 #dispose	14	How do you do?
+5704	n/a	#at 150 20 #time 3 #dispose	19	Nice day, isn't it?
+5705	n/a	#at 150 20 #time 3 #dispose	31	Top o' the mornin' to you, sir!
+5706	n/a	#at 150 20 #time 3 #dispose	10	Hi mister!
+5707			0	
+5708			0	
+5709			0	
+5710			0	
+5711			0	
+5712			0	
+5713			0	
+5714			0	
+5715			0	
+5716			0	
+5717			0	
+5718			0	
+5719			0	
+5720			0	
+5721			0	
+5722			0	
+5723			0	
+5724			0	
+5725			0	
+5726			0	
+5727			0	
+5728			0	
+5729			0	
+5730			0	
+5731			0	
+5732			0	
+5733			0	
+5734			0	
+5735			0	
+5736			0	
+5737			0	
+5738			0	
+5739			0	
+5740			0	
+5741			0	
+5742			0	
+5743			0	
+5744			0	
+5745			0	
+5746			0	
+5747			0	
+5748			0	
+5749			0	
+5750			0	
+5751			0	
+5752			0	
+5753			0	
+5754			0	
+5755			0	
+5756			0	
+5757			0	
+5758			0	
+5759			0	
+5760			0	
+5761			0	
+5762			0	
+5763			0	
+5764			0	
+5765			0	
+5766			0	
+5767			0	
+5768			0	
+5769			0	
+5770			0	
+5771			0	
+5772			0	
+5773			0	
+5774			0	
+5775			0	
+5776			0	
+5777			0	
+5778			0	
+5779			0	
+5780			0	
+5781			0	
+5782			0	
+5783			0	
+5784			0	
+5785			0	
+5786			0	
+5787			0	
+5788			0	
+5789			0	
+5790			0	
+5791			0	
+5792			0	
+5793			0	
+5794			0	
+5795			0	
+5796			0	
+5797			0	
+5798			0	
+5799			0	
+5800	550 22		16	Meeoooorrrrwww!!
+5801	550 23	67 10 10 25 6	26	You! How did you get here?
+5802			0	
+5803	550 25	67 10 10 25 6	37	Never mind! Your journey is now over!
+5804			0	
+5805			0	
+5806			0	
+5807			0	
+5808			0	
+5809			0	
+5810			0	
+5811			0	
+5812			0	
+5813			0	
+5814			0	
+5815			0	
+5816			0	
+5817			0	
+5818			0	
+5819			0	
+5820			0	
+5821			0	
+5822			0	
+5823			0	
+5824			0	
+5825			0	
+5826			0	
+5827			0	
+5828			0	
+5829			0	
+5830			0	
+5831			0	
+5832			0	
+5833			0	
+5834			0	
+5835			0	
+5836			0	
+5837			0	
+5838			0	
+5839			0	
+5840			0	
+5841			0	
+5842			0	
+5843			0	
+5844			0	
+5845			0	
+5846			0	
+5847			0	
+5848			0	
+5849			0	
+5850			0	
+5851			0	
+5852			0	
+5853			0	
+5854			0	
+5855			0	
+5856			0	
+5857			0	
+5858			0	
+5859			0	
+5860			0	
+5861			0	
+5862			0	
+5863			0	
+5864			0	
+5865			0	
+5866			0	
+5867			0	
+5868			0	
+5869			0	
+5870			0	
+5871			0	
+5872			0	
+5873			0	
+5874			0	
+5875			0	
+5876			0	
+5877			0	
+5878			0	
+5879			0	
+5880			0	
+5881			0	
+5882			0	
+5883			0	
+5884			0	
+5885			0	
+5886			0	
+5887			0	
+5888			0	
+5889			0	
+5890			0	
+5891			0	
+5892			0	
+5893			0	
+5894			0	
+5895			0	
+5896			0	
+5897			0	
+5898			0	
+5899			0	
+5900	17 0		20	Who are you?! A spy!
+5901	213 2	#at 20 20 #dispose	15	A spy! Get him!
+5902	216 2	#at 20 20 #dispose	12	An intruder!

@@ -1,0 +1,256 @@
+Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio)
+9000	55 0	#at -1 20 #dispose	11	Duh...DINK!
+9001	n/a		17	Dink! Dink! Dink!
+9002	n/a		5	Dink!
+9003	55 16		17	Dink! Dink! Dink!
+9004			0	
+9005			0	
+9006			0	
+9007			0	
+9008			0	
+9009			0	
+9010			0	
+9011			0	
+9012			0	
+9013			0	
+9014			0	
+9015			0	
+9016			0	
+9017			0	
+9018	10 0	67 10 10 25 8	48	Where did you git this? I thought I had lost it.
+9019	10 1	67 10 90 25 8	72	Oh, is it yours? I found it in the old witch's house in the Dark Forest.
+9020	10 2	67 10 10 25 12	101	So that's where it got to...the old hag took it, eh? You know, this ain't no ordinary spinning wheel.
+9021	10 3	67 10 90 25 7	37	It's not? What's so special about it?
+9022	10 4	67 10 10 25 12	101	Why, this spinning wheel can spin straw into GOLD, that's what! 'Cept...you gotta know how to use it.
+9023	10 5	67 10 10 25 12	81	I doubt even the witch could figger that out. Thankee for bringin' it back to me.
+9024	10 6	67 10 80 25 15	163	Now, wait! Not so fast! How about that marionette? Don't you think the price of the spinning wheel is worth at least twice that of the puppet? I'd love to have it.
+9025	10 7	67 10 10 25 10	85	Yeah...I guess so. Boy! Give that marionette to the man here. I'll make ya a new one.
+9026	10 8	67 10 10 25 9	60	Come on, boy. Let's go gather up some wood for a new puppet.
+9027	10 9	67 10 90 25 3	17	Excuse me, sir...
+9028	10 11	67 10 80 25 8	125	Oh! I'm terribly sorry to bother you. I was just noticing your son's marionette. It's very interesting. Where did you get it?
+9029	10 12	67 10 10 25 8	62	It's grandson, not son...and I made it fer him. Why d'ya care?
+9030	10 13	67 10 90 25 9	98	I just wanted to comment on its artistry. It's very well done. I don't suppose it could be bought?
+9031	10 14	67 10 10 25 14	111	If it could, the price would be very steep; I reckon you couldn't afford it. Now...leave me and my grandson be!
+9032	10 18		47	I don't like strangers trespassin' in my house.
+9033	10 26		70	Well, what ya standin' around here for? Go on about your own business.
+9034	10 28		57	I don't take charity, young man. I got everythin' I need.
+9035	10 27		70	I ain't in the mood to gab right now. Go find someone else to talk ta.
+9036	13 4	25 8	53	Eet veel cost you one gold coin to see Madame Mushka.
+9037	13 5	25 5	27	Zee cost eez one gold coin.
+9038	13 6	67 10 10 25 10	93	Vell, eet eez not a gold coin, but I guess eet veel be fine. Go on een and see Madame Mushka.
+9039	13 7	67 10 10 25 5	30	You may see Madame Mushka now.
+9040	13 17	67 10 10 25 10	43	Madame Mushka eez tired. No more for today.
+9041	13 18	67 10 10 25 10	66	Eet costs one GOLD coin to see Madame Mushka, not one SILVER coin!
+9042	n/a		24	Dat eez NOT a gold coin!
+9043			0	
+9044			0	
+9045			0	
+9046			0	
+9047			0	
+9048			0	
+9049			0	
+9050	67 0		126	Water, dripping down strands of slimy vegetation hanging from the ceiling, forms a small pool on the cell's cold, stone floor.
+9051	67 1		77	Graham finds himself in a dirty, dingy cell somewhere below Mordack's castle.
+9052	23 3	#at 20 140	61	Graham reaches into the drawer and removes the leather pouch.
+9053	23 4	#at 80 150	36	What's this? Why, it's a little key.
+9054	86 0		69	Graham stoops down and picks up the sturdy rope from the stone floor.
+9055	18 7		34	Oh, my! Look at all this treasure!
+9056	206 40		99	The baker bides his time behind the counter while Graham looks hungrily at all the delicious wares.
+9057	206 41		85	Graham waits to further bother the baker until a decision for purchase has been made.
+9058	(rm089)		34	Say 'hello' to Davy Jones, Graham.
+9059	216 0		28	This is no time for talking!
+9060	(rm047)		30	That was a nasty sea creature!
+9061	47 4		49	Graham sails uncertainly in the vast, blue ocean.
+9062	47 10		48	Graham spies an interesting island to the north.
+9063	47 11		57	Graham notices beautiful seagulls flying in the distance.
+9064	4 1	#at 20 140	71	Bending down, Graham quickly retrieves the silver coin from the street.
+9065	4 17		51	The man is too busy with his work to notice Graham.
+9066	4 23		83	The people are too caught up in their own business to pay much attention to Graham.
+9067	205 27		78	The poor woman has enough troubles of her own without worrying about Graham's.
+9068	49 4		61	Graham bends over and picks up the beautifully-colored shell.
+9069	54 11		46	Too late! One of Mordack's henchman is coming.
+9070	1 5		45	The cool pond water quenches Graham's thirst.
+9071	204 54	#at 10 10	89	The old toymaker gives Graham the courtesy to look around the shop without pestering him.
+9072	15 12		69	A small well! Graham's hot, thirsty body is irresistibly drawn to it.
+9073	15 3		76	Uneasily, Graham reaches down and removes the old shoe from the desert sand.
+9074	31 7		38	Graham can't reach the rope from here.
+9075	28 3	#at 10 10	73	Reaching into the open cupboard, Graham pulls out the savory leg of lamb.
+9076	203 38	#at 20 20	87	Being a good businessman, the solicitous tailor would love to sell something to Graham.
+9077			0	
+9078			0	
+9079			0	
+9080			0	
+9081			0	
+9082			0	
+9083			0	
+9084			0	
+9085			0	
+9086			0	
+9087			0	
+9088			0	
+9089			0	
+9090			0	
+9091			0	
+9092			0	
+9093			0	
+9094			0	
+9095			0	
+9096			0	
+9097			0	
+9098			0	
+9099			0	
+9100	76 3	67 90 10 25 8	61	I appreciate all you've done, Crispin. I'll be on my way now.
+9101	110 6	#at 100 10 #dispose	23	Aye, aye, sir. I'm off.
+9102	110 3	#at 100 10 #dispose	48	I want to thank you for all your help, Mr....uh?
+9103	17 7		14	Excuse me.....
+9104	46 4	#at 100 10 #dispose	31	Thanks again for all your help.
+9105	40 7	67 142 8 70 160 25 8	57	Will we EVER find our way out of these mountains, Graham?
+9106	1 0	67 10 10 25 8	62	I suggest we visit the town first. How about it, Your Majesty?
+9107	1 2	67 10 10 25 12	187	I'd be delighted to...Graham. Anyway...what was I talking about...Oh, yes! The town! You might be able to find some supplies there. It's just over a little hill to the south; not too far.
+9108	51 0	67 10 10 25 5	43	I think I'll stay here until you come back.
+9109	76 0	67 10 10 25 8	102	Don't be wasting your time coming in here! Young man, I've done all I can for you. Now it's up to you.
+9110	76 1	67 10 10 25 8	123	Well, anyway...I'm not going to be here for a little while. There's an emergency I have to attend to in a neighboring land.
+9111	76 2	67 10 10 25 8	148	I'll try to keep an eye out for you... but... this is something you and Cedric are going to have to do yourselves. I wish you the best, King Graham.
+9112	208 0	#at 20 140 #dispose	75	Ah! Freedom at last! Now YOU spend the next five hundred years in a bottle!
+9113	46 14	67 10 10 25 7	108	Wounded by the harpies, did you say? Well, bring him on into the house. I'll fix him right up...good as new!
+9114	214 1	#at 20 20 #dispose	12	Open sesame!
+9115			0	
+9116			0	
+9117			0	
+9118			0	
+9119			0	
+9120			0	
+9121			0	
+9122			0	
+9123			0	
+9124			0	
+9125			0	
+9126			0	
+9127			0	
+9128			0	
+9129			0	
+9130			0	
+9131			0	
+9132			0	
+9133			0	
+9134			0	
+9135			0	
+9136			0	
+9137			0	
+9138			0	
+9139			0	
+9140			0	
+9141			0	
+9142			0	
+9143			0	
+9144			0	
+9145			0	
+9146			0	
+9147			0	
+9148			0	
+9149			0	
+9150			0	
+9151			0	
+9152			0	
+9153			0	
+9154			0	
+9155			0	
+9156			0	
+9157			0	
+9158			0	
+9159			0	
+9160			0	
+9161			0	
+9162			0	
+9163			0	
+9164			0	
+9165			0	
+9166			0	
+9167			0	
+9168			0	
+9169			0	
+9170			0	
+9171			0	
+9172			0	
+9173			0	
+9174			0	
+9175			0	
+9176			0	
+9177			0	
+9178			0	
+9179			0	
+9180			0	
+9181			0	
+9182			0	
+9183			0	
+9184			0	
+9185			0	
+9186			0	
+9187			0	
+9188			0	
+9189			0	
+9190			0	
+9191			0	
+9192			0	
+9193			0	
+9194			0	
+9195			0	
+9196			0	
+9197			0	
+9198			0	
+9199			0	
+9200			0	
+9201			0	
+9202			0	
+9203			0	
+9204			0	
+9205			0	
+9206			0	
+9207			0	
+9208			0	
+9209			0	
+9210			0	
+9211			0	
+9212			0	
+9213			0	
+9214			0	
+9215			0	
+9216			0	
+9217			0	
+9218			0	
+9219			0	
+9220	n/a		47	Raises and lowers the level of graphics detail.
+9221	n/a		21	Adjusts sound volume.
+9222	n/a		42	Adjusts the speed of the game's animation.
+9223	n/a		24	Saves your current game.
+9224	n/a		33	Restores a previously saved game.
+9225	n/a		18	Restarts the game.
+9226	n/a		15	Exits the game.
+9227	n/a		27	Information about the game.
+9228	n/a		16	Exits this menu.
+9229	n/a		25	This icon is for walking.
+9230	n/a		25	This icon is for looking.
+9231	n/a		23	This icon is for doing.
+9232	n/a		25	This icon is for talking.
+9233	n/a		41	This icon is for current inventory items.
+9234	n/a		41	This icon brings up the inventory window.
+9235	n/a		38	This icon brings up the control panel.
+9236	n/a		38	This icon tells you about other icons.
+9237	n/a		214	The wait cursor will appear on the screen any time the game is at a stage will it not respond to any of your commands. During this time, you will not be able to move Graham nor will you have access to the icon bar.
+9238	n/a		261	The hold cursor will appear on the screen any time that Graham is not under your control. But the game will still respond to other commands that don't involve moving Graham. The icon bar and most of its functions will still be available to you during this time.
+9239	n/a		79	Choose WALK to move Graham to any location that he is able to reach by walking.
+9240	n/a		64	Choose LOOK when you want Graham to look at something on screen.
+9241	n/a		134	Choose ACTION when you want Graham to perform an action on an object. For example, getting a drink from a pond or jumping onto a rock.
+9242	n/a		95	Choose TALK when you want to initiate a conversation between Graham and another game character.
+9243	n/a		146	Choose ITEM when you want Graham to use that item in the game. An image of the most recently selected inventory item will appear inside the frame.
+9244	n/a		91	Choose INVENTORY when you want to see and select from the items you are currently carrying.
+9245	n/a		244	Choose CONTROLS when you want to adjust Graham's walking speed, the sound volume, and/or the game detail level. Also choose this if you would like to save your current game, restore your current game, quit playing or restart from the beginning.
+9246	n/a		174	Choose INFORMATION when you would like to know what each individual cursor does. When you click this button, click another on the icon bar and you will receive a description.
+9247	n/a		0	
+9248	n/a		0	
+9249	n/a		0	
+9250	n/a		38	Select this icon to close this window.
+9251	n/a		75	Select this icon then select an inventory item you'd like a description of.
+9252	n/a		43	This allows you to do something to an item.
+9253	n/a		34	This allows you to select an item.
+9254	n/a		0	

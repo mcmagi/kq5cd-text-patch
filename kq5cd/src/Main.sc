@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 0)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Interface)
 (use BertaWindow)
 (use Audio)
@@ -45,7 +45,8 @@
 	SetScore 27
 	proc0_28 28
 	Say 29
-	proc0_30 30
+	SayWithIcon 30
+	DoAudioWithText 31
 )
 
 (local
@@ -769,8 +770,9 @@
 	(DoAudio audPLAY global330)
 	(repeat
 		(switch
-			(Print
-				{}
+			(PrintForAudio
+				global330
+				false ; don't print letter icon
 				#width
 				220
 				#icon
@@ -806,57 +808,196 @@
 	)
 )
 
-(procedure (Say param1 param2 &tmp temp0 temp1 temp2 temp3)
+(procedure (Say resource timerSeconds &tmp cursor event audioTime volume)
 	(DoAudio audSTOP)
 	(if (and (not (== argc 3)) (not global401))
 		(= global401 1)
-		(= temp3 (gGame masterVolume:))
+		(= volume (gGame masterVolume:))
 		(if (>= (gGame masterVolume:) 4)
-			(gGame masterVolume: (- temp3 4))
+			(gGame masterVolume: (- volume 4))
 		)
 	)
 	(cond
 		((and (== argc 2) (not (== argc 3)))
-			(SpeakTimer theVol: temp3 set60ths: param2 (DoAudio audPLAY param1))
+			(SpeakTimer theVol: volume set60ths: timerSeconds (DoAudioWithText resource))
 		)
 		((== argc 3)
-			(DoAudio audPLAY param1)
+			(DoAudioWithText resource)
 		)
 		(else
-			(= temp0 (gGame setCursor: speakCursor))
-			(= temp2 (+ (DoAudio audPLAY param1) 2 (GetTime)))
+			(= cursor (gGame setCursor: speakCursor))
+			(= audioTime (+ (DoAudioWithText resource) 2 (GetTime)))
+			; loop until audio time elapses or there is a button event
 			(while
 				(and
 					(or
-						(not ((= temp1 (Event new:)) type:))
-						(== (temp1 type:) evMOUSERELEASE)
-						(== (temp1 type:) evJOYUP)
+						(not ((= event (Event new:)) type:))
+						(== (event type:) evMOUSERELEASE)
+						(== (event type:) evJOYUP)
 					)
-					(< (GetTime) temp2)
+					(< (GetTime) audioTime)
 					(!= (DoAudio audPOSITION) -1)
 				)
-				(if (IsObject temp1)
-					(temp1 dispose:)
-					(= temp1 0)
+				(if (IsObject event)
+					(event dispose:)
+					(= event 0)
 				)
 			)
-			(if (IsObject temp1)
-				(temp1 dispose:)
-				(= temp1 0)
+			(if (IsObject event)
+				(event dispose:)
+				(= event 0)
 			)
 			(DoAudio audSTOP)
 			(if (== global401 1)
-				(gGame masterVolume: temp3)
+				(gGame masterVolume: volume)
 				(= global401 0)
 			)
-			(gGame setCursor: temp0)
+			(gGame setCursor: cursor)
 		)
 	)
 )
 
-(procedure (proc0_30 param1 param2 param3 param4)
-	(DoAudio audPLAY param1)
-	(Print {} #icon param2 param3 param4 &rest)
+(procedure (SayWithIcon resource view loop cel)
+	(DoAudioWithText resource #icon view loop cel &rest)
+)
+
+(procedure (DoAudioWithText resource &tmp time result narrator hasIconParam)
+	; play audio
+	(= time (DoAudio audPLAY resource))
+
+	; narrator at 0-858 or 9050-9076
+	(= narrator	
+		(or
+			(<= resource 858)
+			(and (>= resource 9050) (< resource 9100))
+		)
+	)
+
+	; do we already have an icon parameter argument?
+	(= hasIconParam
+		(and (> argc 1) (== [resource 1] #icon))
+	)
+
+	(= result
+		(PrintForAudio
+			resource
+			; show letter icon if narrator and we don't already have an icon
+			(and narrator (not hasIconParam))
+			&rest
+		)
+	)
+
+	; if we printed a dialog, then stop audio when print window closes
+	; ... unless we printed a modeless dialog
+	(if (and (!= result -1) (!= result gModelessDialog))
+		(DoAudio audSTOP)
+	)
+
+	(return time)
+)
+
+(procedure (PrintForAudio resource withLetterIcon &tmp module entry [msg 400] [selector 50] result)
+	(= result -1)
+
+	; map resource number to module/entry (and flag narrator)
+	(cond
+		((>= resource 9990)
+			; 9996-9999 -> no mapping (musical interludes)
+			; 10101-10126 -> no mapping (intro/outro with music)
+			(= module -1)
+		)
+		((>= resource 9000)
+			; 9000-9254 -> module 390: 0-254
+			(= module 390)
+			(= entry (- resource 9000))
+		)
+		((>= resource 7700)
+			; 7771-7772,7777 -> no mapping (sound effects)
+			; 8018-8200,8810-8898 -> no mapping (sound effects)
+			(= module -1)			
+		)
+		((>= resource 7000)
+			; 7011-7067 -> module 370: 11-67
+			(= module 370)
+			(= entry (- resource 7000))
+		)
+		((>= resource 5000)
+			; 5000-5902 -> module 350: 0-902
+			(= module 350)
+			(= entry (- resource 5000))
+		)
+		((>= resource 4000)
+			; 4000-4008 -> module 340: 0-8
+			(= module 340)
+			(= entry (- resource 4000))
+		)
+		((>= resource 3000)
+			; 3000-3090 -> module 330: 0-90
+			(= module 330)
+			(= entry (- resource 3000))
+		)
+		(else
+			; 0-1238 -> module 300: 0-1238 (default)
+			(= module 300)
+			(= entry resource)
+		)
+	)
+
+	; debugging
+	;(Printf "%d -> %d:%d (%d)" resource module entry narrator)
+
+	; lookup corresponding message and print it if present
+	(if (> module 0)
+		(GetFarText module entry @msg)
+		(if (> (StrLen @msg) 0)
+			; lookup selector string if we didn't pass any selectors
+			(if (<= argc 2)
+				(GetFarText (+ module 1) entry @selector)
+			)
+			(if withLetterIcon
+				; show message with first letter as icon (reserved for narrator)
+				(= result (PrintDC @msg 0 &rest #selector @selector))
+				;(= result (PrintDC @msg 0 &rest))
+			else
+				; show message
+				(= result (Print @msg &rest #selector @selector))
+			)
+		)
+	)
+
+	(return result)
+)
+
+(procedure (PrintDC moduleOrMsg entry &tmp char1 char2 loop cel [msg 400] [newmsg 400])
+	(if (u< moduleOrMsg 1000)
+		(GetFarText moduleOrMsg entry @msg)
+	else
+		(StrCpy @msg moduleOrMsg)
+	)
+	; get first & second letters
+	(= char1 (StrAt @msg 0))
+	(= char2 (StrAt @msg 1))
+	; check if first letter is ascii code A-Z
+	(if (and (>= char1 65) (<= char1 90))
+		; replace first letter with space
+		(StrAt @msg 0 32)
+		; set newmsg = msg prefixed with extra spacing
+		(if (== char2 32)
+			(Format @newmsg {___})
+		else
+			(Format @newmsg {__})
+		)
+		(StrCat @newmsg @msg)
+		; calc index into spritesheet (loop & cel)
+		(= loop (+ 0 (/ (- char1 65) 13)))
+		(= cel (mod (- char1 65) 13))
+		; print string with first letter as icon:
+		;  945 - view# of spritesheet
+		(Print @newmsg &rest #icon 945 loop cel #letter)
+	else
+		; just print string
+		(Print @msg &rest)
+	)
 )
 
 (procedure (SetScore param1)
@@ -1890,4 +2031,3 @@
 		(super init: &rest)
 	)
 )
-

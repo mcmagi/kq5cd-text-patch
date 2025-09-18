@@ -40,290 +40,313 @@
 	(Print txt #icon v l c &rest)
 )
 
-(procedure (Print args &tmp temp0 temp1 temp2 temp3 temp4 temp5 temp6 temp7 temp8 temp9 temp10 temp11 [temp12 6] temp18 temp19 temp20 [temp21 1001] temp1022 temp1023 temp1024 temp1025 temp1026 temp1027 temp1028 temp1029 temp1030 temp1031 temp1032)
-	(= temp1028 0)
-	(= temp1029 0)
-	(= temp6 (= temp7 -1))
-	(= temp1026 (gGame printLang:))
-	(= temp1027 (gGame subtitleLang:))
-	(= temp1032
-		(= temp9
-			(= temp8
+(procedure (Print args0 &tmp newDialog newDText newDIcon newDEdit result idx xPos yPos width tmpDialog pItem port [dButtons 6] temp18 buttonCount temp20 [msg 1001] charIdx jDText printDText subtitleDText printLang subtitleLang hasWidth hasIcon jOffset unused isFirst isLetter newArgsList newNode [args 20] argsCount)
+	; clone args array
+	(= argsCount argc)
+	(for ((= idx 0)) (< idx argc) ((++ idx))
+		(= [args idx] [args0 idx])
+	)
+	(= hasWidth 0)
+	(= hasIcon 0)
+	(= xPos (= yPos -1))
+	(= printLang (gGame printLang:))
+	(= subtitleLang (gGame subtitleLang:))
+	(= isFirst
+		(= tmpDialog
+			(= width
 				(= temp18
-					(= temp2 (= temp3 (= temp1023 (= temp1030 (= temp19 0)))))
+					(= newDIcon (= newDEdit (= jDText (= jOffset (= buttonCount 0)))))
 				)
 			)
 		)
 	)
-	((= temp0 (Dialog new:)) window: gSystemWindow name: {PrintD})
+	((= newDialog (Dialog new:)) window: gSystemWindow name: {PrintD})
 	(cond
 		((u< [args 0] 1000)
-			(GetFarText [args 0] [args 1] @temp21)
-			(= temp5 2)
+			(GetFarText [args 0] [args 1] @msg)
+			(= idx 2)
 		)
 		([args 0]
-			(StrCpy @temp21 [args 0])
-			(= temp5 1)
+			(StrCpy @msg [args 0])
+			(= idx 1)
 		)
 		(else
-			(= temp21 0)
-			(= temp5 0)
+			(= msg 0)
+			(= idx 0)
 		)
 	)
-	(for ((= temp1022 0)) (StrAt @temp21 temp1022) ((++ temp1022))
+	(for ((= charIdx 0)) (StrAt @msg charIdx) ((++ charIdx))
 		(if
 			(and
-				(== (StrAt @temp21 temp1022) 14848)
-				(== (StrAt @temp21 (+ 1 temp1022)) 74)
+				(== (StrAt @msg charIdx) 14848)
+				(== (StrAt @msg (+ 1 charIdx)) 74)
 			)
 			(gGame printLang: 1 subtitleLang: 81)
-			(StrSplit @temp21 @temp21 {#J})
-			(gGame printLang: temp1026 subtitleLang: temp1027)
-			(StrAt @temp21 temp1022 0)
-			(if (OneOf 81 temp1026 temp1027)
-				((= temp1023 (DText new:))
-					text: (+ @temp21 2 temp1022)
+			(StrSplit @msg @msg {#J}) ; StrSplit() but symbol not present
+			(gGame printLang: printLang subtitleLang: subtitleLang)
+			(StrAt @msg charIdx 0)
+			(if (OneOf 81 printLang subtitleLang)
+				((= jDText (DText new:))
+					text: (+ @msg 2 charIdx)
 					font: 900
 					name: {jDText}
 				)
 			)
 		)
 	)
-	((= temp1 (DText new:)) text: @temp21 font: gUserFont)
-	(= temp1024 (if (and temp1023 (== temp1026 81)) temp1023 else temp1))
-	(= temp1025
+	((= newDText (DText new:)) text: @msg font: gUserFont)
+	(= printDText (if (and jDText (== printLang 81)) jDText else newDText))
+	(= subtitleDText
 		(cond
-			((== temp1027 81) temp1023)
-			(temp1023
-				(if temp1027
-					temp1
+			((== subtitleLang 81) jDText)
+			(jDText
+				(if subtitleLang
+					newDText
 				else
-					(temp1 dispose:)
-					(= temp1 0)
+					(newDText dispose:)
+					(= newDText 0)
 				)
 			)
 		)
 	)
-	(temp1024 moveTo: 4 4 setSize:)
-	(temp0 add: temp1024 setSize:)
-	(if temp1025
-		(temp1025
+	(printDText moveTo: 4 4 setSize:)
+	(newDialog add: printDText setSize:)
+	(if subtitleDText
+		(subtitleDText
 			setSize:
-			moveTo: (temp1024 nsLeft:) (+ 4 (temp1024 nsBottom:))
+			moveTo: (printDText nsLeft:) (+ 4 (printDText nsBottom:))
 		)
-		(temp0 add: temp1025 setSize:)
+		(newDialog add: subtitleDText setSize:)
 	)
-	(for ((= temp5 temp5)) (< temp5 argc) ((++ temp5))
-		(switch [args temp5]
-			(30
-				(++ temp5)
-				(if (and temp1 (not temp1025))
-					(temp1 mode: [args temp5])
+	(for ((= idx idx)) (< idx argsCount) ((++ idx))
+		(switch [args idx]
+			(#mode
+				(++ idx)
+				(if (and newDText (not subtitleDText))
+					(newDText mode: [args idx])
 				)
 			)
-			(33
-				(++ temp5)
-				(if temp1
-					(temp1 font: [args temp5] setSize: temp8)
+			(#font
+				(++ idx)
+				(if newDText
+					(newDText font: [args idx] setSize: width)
 				)
 			)
-			(70
-				(= temp1028 1)
-				(= temp8 [args (++ temp5)])
-				(temp1024 setSize: temp8)
-				(if temp1025
-					(temp1025
-						setSize: temp8
-						moveTo: (temp1024 nsLeft:) (+ 4 (temp1024 nsBottom:))
+			(#width
+				(= hasWidth 1)
+				(= width [args (++ idx)])
+				(printDText setSize: width)
+				(if subtitleDText
+					(subtitleDText
+						setSize: width
+						moveTo: (printDText nsLeft:) (+ 4 (printDText nsBottom:))
 					)
 				)
 			)
-			(25
-				(++ temp5)
-				(temp0 time: [args temp5])
+			(#time
+				(++ idx)
+				(newDialog time: [args idx])
 			)
-			(80
-				(++ temp5)
-				(temp0 text: [args temp5])
+			(#title
+				(++ idx)
+				(newDialog text: [args idx])
 			)
-			(67
-				(= temp6 [args (++ temp5)])
-				(= temp7 [args (++ temp5)])
+			(#at
+				(= xPos [args (++ idx)])
+				(= yPos [args (++ idx)])
 			)
-			(83
+			(#draw
 				(Animate (gCast elements:) 0)
 			)
-			(41
-				(++ temp5)
-				((= temp3 (DEdit new:)) text: [args temp5])
-				(++ temp5)
-				(temp3 max: [args temp5] setSize:)
+			(#edit
+				(++ idx)
+				((= newDEdit (DEdit new:)) text: [args idx])
+				(++ idx)
+				(newDEdit max: [args idx] setSize:)
 			)
-			(81
-				((= [temp12 temp19] (DButton new:))
-					text: [args (++ temp5)]
-					value: [args (++ temp5)]
+			(#button
+				((= [dButtons buttonCount] (DButton new:))
+					text: [args (++ idx)]
+					value: [args (++ idx)]
 					setSize:
 				)
-				(+= temp18 (+ ([temp12 temp19] nsRight:) 4))
-				(++ temp19)
+				(+= temp18 (+ ([dButtons buttonCount] nsRight:) 4))
+				(++ buttonCount)
 			)
-			(82
-				(= temp1029 1)
-				(if (IsObject [args (+ temp5 1)])
-					(= temp2 ([args (+ temp5 1)] new:))
-					(temp2 setSize:)
-					(+= temp5 1)
+			(#icon
+				(= hasIcon 1)
+				(if (IsObject [args (+ idx 1)])
+					(= newDIcon ([args (+ idx 1)] new:))
+					(newDIcon setSize:)
+					(+= idx 1)
 				else
-					(= temp2 (DIcon new:))
-					(temp2
-						view: [args (+ temp5 1)]
-						loop: [args (+ temp5 2)]
-						cel: [args (+ temp5 3)]
+					(= newDIcon (DIcon new:))
+					(newDIcon
+						view: [args (+ idx 1)]
+						loop: [args (+ idx 2)]
+						cel: [args (+ idx 3)]
 						setSize:
 					)
-					(+= temp5 3)
+					(+= idx 3)
 				)
 			)
-			(108
-				(if (and (< (+ temp5 1) argc) (IsObject [args (+ temp5 1)]))
-					(temp0 caller: [args (+ temp5 1)])
-					(++ temp5)
+			(#dispose
+				(if (and (< (+ idx 1) argsCount) (IsObject [args (+ idx 1)]))
+					(newDialog caller: [args (+ idx 1)])
+					(++ idx)
 				)
 				(if gModelessDialog
 					(gModelessDialog dispose:)
 				)
-				(= temp9 temp0)
+				(= tmpDialog newDialog)
 			)
-			(35
-				(++ temp5)
-				(temp0 window: [args temp5])
+			(#window
+				(++ idx)
+				(newDialog window: [args idx])
 			)
-			(121
-				(= temp1032 1)
+			(#first
+				(= isFirst 1)
+			)
+            (#letter
+                (= isLetter 1)
+            )
+            (#selector
+            	(++ idx)
+            	; parse selector string into a list
+				(= newArgsList (ParseSelector [args idx]))
+				; append selector args to args array, increasing number of args
+				(for ((= newNode (FirstNode newArgsList))) (!= newNode null) ((= newNode (NextNode newNode))(++ argsCount))
+					(= [args argsCount] (NodeValue newNode))
+				)
+				(DisposeList newArgsList)
 			)
 		)
 	)
-	(if temp1032
-		(= temp9 0)
+	(if isFirst
+		(= tmpDialog 0)
 	)
 	(if
 		(and
-			(not (or temp1028 temp1029))
-			(> (- (temp0 nsBottom:) (temp0 nsTop:)) 100)
+			(not (or hasWidth hasIcon))
+			(> (- (newDialog nsBottom:) (newDialog nsTop:)) 100)
 		)
-		(temp1024 setSize: 300)
-		(if temp1025
-			(temp1025
+		(printDText setSize: 300)
+		(if subtitleDText
+			(subtitleDText
 				setSize: 300
-				moveTo: (temp1024 nsLeft:) (+ 4 (temp1024 nsBottom:))
+				moveTo: (printDText nsLeft:) (+ 4 (printDText nsBottom:))
 			)
 		)
 	)
-	(if temp2
-		(temp2 moveTo: 4 4)
-		(if (or (== temp1024 temp1023) (== temp1025 temp1023))
-			(= temp1030 8)
+	(if newDIcon
+		(newDIcon moveTo: 4 4)
+		(if (or (== printDText jDText) (== subtitleDText jDText))
+			(= jOffset 8)
 		)
-		(if (& (temp2 state:) $0010)
-			(temp1024
-				moveTo: (+ 4 temp1030) (+ (temp2 nsBottom:) (temp1024 nsTop:))
+		(if (& (newDIcon state:) $0010)
+			(printDText
+				moveTo: (+ 4 jOffset) (+ (newDIcon nsBottom:) (printDText nsTop:))
 				setSize:
 			)
 		else
-			(temp1024
-				moveTo: (+ 4 (temp2 nsRight:) temp1030) (temp1024 nsTop:)
+			(printDText
+				moveTo: (+ 4 (newDIcon nsRight:) jOffset) (printDText nsTop:)
 				setSize:
 			)
 		)
-		(if temp1025
-			(temp1025 moveTo: (temp1024 nsLeft:) (+ 4 (temp1024 nsBottom:)))
+		(if subtitleDText
+			(subtitleDText moveTo: (printDText nsLeft:) (+ 4 (printDText nsBottom:)))
 		)
-		(temp0 add: temp2)
+		(if isLetter
+			(newDText moveTo: (+ 4 (newDIcon nsLeft:)) (- (newDIcon nsBottom:) 7))
+		)
+		(newDialog add: newDIcon)
 	)
-	(temp0 setSize:)
-	(if temp3
-		(temp3
+	(newDialog setSize:)
+	(if newDEdit
+		(newDEdit
 			moveTo:
-				((or temp1025 temp1024) nsLeft:)
-				(+ 4 ((or temp1025 temp1024) nsBottom:))
+				((if subtitleDText else printDText) nsLeft?)
+				(+ 4 ((if subtitleDText else printDText) nsBottom?))
 		)
-		(temp0 add: temp3 setSize:)
+		(newDialog add: newDEdit setSize:)
 	)
 	(= temp20
-		(if (> temp18 (temp0 nsRight:))
+		(if (> temp18 (newDialog nsRight:))
 			4
 		else
-			(- (temp0 nsRight:) temp18)
+			(- (newDialog nsRight:) temp18)
 		)
 	)
-	(for ((= temp5 0)) (< temp5 temp19) ((++ temp5))
-		([temp12 temp5] moveTo: temp20 (temp0 nsBottom:))
-		(temp0 add: [temp12 temp5])
-		(= temp20 (+ 4 ([temp12 temp5] nsRight:)))
+	(for ((= idx 0)) (< idx buttonCount) ((++ idx))
+		([dButtons idx] moveTo: temp20 (newDialog nsBottom:))
+		(newDialog add: [dButtons idx])
+		(= temp20 (+ 4 ([dButtons idx] nsRight:)))
 	)
-	(temp0 setSize: center:)
+	(newDialog setSize: center:)
 	(if
 		(or
-			(and temp2 (& (temp2 state:) $0010))
-			(and temp2 (not (StrLen @temp21)))
+			(and newDIcon (& (newDIcon state:) $0010))
+			(and newDIcon (not (StrLen @msg)))
 		)
-		(temp2
+		(newDIcon
 			moveTo:
 				(/
 					(-
-						(- (temp0 nsRight:) (temp0 nsLeft:))
-						(- (temp2 nsRight:) (temp2 nsLeft:))
+						(- (newDialog nsRight:) (newDialog nsLeft:))
+						(- (newDIcon nsRight:) (newDIcon nsLeft:))
 					)
 					2
 				)
 				4
 		)
 	)
-	(temp0
+	(newDialog
 		moveTo:
-			(if (== -1 temp6)
-				(temp0 nsLeft:)
+			(if (== -1 xPos)
+				(newDialog nsLeft:)
 			else
-				temp6
+				xPos
 			)
-			(if (== -1 temp7)
-				(temp0 nsTop:)
+			(if (== -1 yPos)
+				(newDialog nsTop:)
 			else
-				temp7
+				yPos
 			)
 	)
-	(= temp11 (GetPort))
-	(temp0 open: (if (temp0 text:) 4 else 0) (if temp9 15 else -1))
-	(if temp9
+	(= port (GetPort))
+	(newDialog open: (if (newDialog text:) 4 else 0) (if tmpDialog 15 else -1))
+	(if tmpDialog
 		(= gModelessPort (GetPort))
-		(SetPort temp11)
-		(return (= gModelessDialog temp9))
+		; return modeless dialog reference if used
+		(SetPort port)
+		(return (= gModelessDialog tmpDialog))
 	else
 		(gSounds pause: 1)
 	)
 	(if
 		(and
-			(= temp10 (temp0 firstTrue: #checkState 1))
-			(not (temp0 firstTrue: #checkState 2))
+			(= pItem (newDialog firstTrue: #checkState 1))
+			(not (newDialog firstTrue: #checkState 2))
 		)
-		(temp10 state: (| (temp10 state:) $0002))
+		(pItem state: (| (pItem state:) $0002))
 	)
-	(if (== (= temp4 (temp0 doit: temp10)) -1)
-		(= temp4 0)
+	(if (== (= result (newDialog doit: pItem)) -1)
+		(= result 0)
 	)
-	(for ((= temp5 0)) (< temp5 temp19) ((++ temp5))
-		(if (== temp4 [temp12 temp5])
-			(= temp4 (temp4 value:))
+	; set return result as selected button value (if any)
+	(for ((= idx 0)) (< idx buttonCount) ((++ idx))
+		(if (== result [dButtons idx])
+			(= result (result value:))
 			(break)
 		)
 	)
-	(if (not (temp0 theItem:))
-		(= temp4 1)
+	(if (not (newDialog theItem:))
+		(= result 1)
 	)
-	(temp0 dispose:)
+	(newDialog dispose:)
 	(gSounds pause: 0)
-	(return temp4)
+	(return result)
 )
 
 (procedure (GetNumber string default &tmp [theLine 40])
@@ -343,6 +366,105 @@
 (procedure (Printf &tmp [str 500])
 	(Format @str &rest)
 	(Print @str)
+)
+
+(procedure (ParseSelector selectorStr &tmp startIdx endIdx argLen [argStr 20] newArgsList newArgsCtr newValue char1)
+	(= newArgsList (NewList))
+	(= newArgsCtr 0)
+	(= startIdx 0)
+
+	; loop through each argument in selector string until we hit terminator
+	(repeat
+		; locate arg by finding next space (or terminator) in string
+		(= endIdx (StrChr selectorStr 32 startIdx))
+		(= argLen (- endIdx startIdx))
+
+		; extract argument from selector string
+		(StrCpy @argStr (+ selectorStr startIdx) argLen)
+		(= char1 (StrAt @argStr 0))
+		(= newValue -1)
+		(cond
+			; if arg starts with a number, convert string to integer
+			((and (>= char1 48) (<= [char1 0] 57))
+				(= newValue (ReadNumber @argStr))
+			)
+          	; otherwise, translate string to a selector used in Print function
+           	((== (StrCmp @argStr {#time}) 0)
+           		(= newValue #time)
+			)
+           	((== (StrCmp @argStr {#mode}) 0)
+           		(= newValue #mode)
+			)
+           	((== (StrCmp @argStr {#font}) 0)
+           		(= newValue #font)
+			)
+           	((== (StrCmp @argStr {#window}) 0)
+           		(= newValue #window)
+			)
+           	((== (StrCmp @argStr {#edit}) 0)
+           		(= newValue #edit)
+			)
+           	((== (StrCmp @argStr {#at}) 0)
+           		(= newValue #at)
+			)
+           	((== (StrCmp @argStr {#width}) 0)
+           		(= newValue #width)
+			)
+           	((== (StrCmp @argStr {#title}) 0)
+           		(= newValue #title)
+			)
+           	((== (StrCmp @argStr {#button}) 0)
+           		(= newValue #button)
+			)
+           	((== (StrCmp @argStr {#icon}) 0)
+           		(= newValue #icon)
+			)
+           	((== (StrCmp @argStr {#draw}) 0)
+           		(= newValue #draw)
+			)
+           	((== (StrCmp @argStr {#dispose}) 0)
+           		(= newValue #dispose)
+			)
+           	((== (StrCmp @argStr {#first}) 0)
+           		(= newValue #first)
+			)
+           	((== (StrCmp @argStr {#letter}) 0)
+           		(= newValue #letter)
+			)
+           	((== (StrCmp @argStr {#dontErase}) 0)
+           		; TODO: #dontErase
+			)
+		)
+		; if value found, add to args list
+		(if (>= newValue 0)
+			;(Printf "ParseSelector: %s -> arg(%d)=%d" @argStr newArgsCtr newValue)
+			(AddToEnd newArgsList (NewNode newValue newArgsCtr))
+			(++ newArgsCtr)
+		)
+
+		; break out if we hit the end of the string
+		(breakif (== (StrAt selectorStr endIdx) 0))
+
+		; advance startIdx to end of current arg (+1 for space)
+		(= startIdx (+ endIdx 1))
+	)
+	(return newArgsList)
+)
+
+(procedure (StrChr str chr fromIdx &tmp idx len)
+	; get starting position
+	(if (< argc 3)
+		(= fromIdx 0)
+	)
+	(= len (StrLen str))
+
+	; find first occurrance of chr
+	(for ((= idx fromIdx)) (< idx len) ((++ idx))
+		(if (== (StrAt str idx) chr)
+			(return idx)
+		)
+	)
+	(return idx)
 )
 
 (class MenuBar of Obj
@@ -1135,3 +1257,7 @@
 	)
 )
 
+; symbol not present in vocab.999
+(procedure (StrSplit)
+	(kernel_123 &rest)
+)

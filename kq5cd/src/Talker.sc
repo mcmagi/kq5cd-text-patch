@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 928)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use Sync)
@@ -78,6 +78,10 @@
 					)
 				)
 			)
+		)
+		; clean up any existing dialogs before calling show
+		(if gModelessDialog
+			(gModelessDialog dispose:)
 		)
 		(self show:)
 		(if (>= argc 4)
@@ -217,13 +221,28 @@
 		(Print @temp0 #at x y #dispose)
 	)
 
-	(method (startAudio theKeys &tmp temp0 [temp1 10])
+	(method (startAudio theKeys &tmp temp0 [temp1 10] textX textY textW)
 		(= temp0 theKeys)
+
 		(DoAudio audWPLAY temp0)
 		(if mouth
 			(mouth setCycle: MouthSync temp0)
 		)
-		(= ticks (DoAudio audPLAY temp0))
+
+		; calculate position of text box based on position of talker
+		(= textY (+ nsTop 10)) ; always align top of text box with talker (10 top padding)
+		(if (< nsLeft 119) ; screen is 320 pixels, talker is 82; midpoint (320-82)/2 = 119
+			; adjust text box to right of talker
+			(= textX (+ nsLeft 102))	; x = talker left position + talker (82) + 10 left margin + 10 left padding
+			(= textW (- 290 textX))		; width = 320 screen - text X - 10 right margin + 20 right padding
+		else
+			; adjust text box to left of talker
+			(= textX 20)				; x = 10 left margin + 10 left padding
+			(= textW (- nsLeft 50))		; width = talker left position - 30 padding - 20 margin
+		)
+
+		(= ticks (DoAudioWithText temp0 #at textX textY #width textW #dispose))
+
 		(if eyes
 			(eyes setCycle: RTRandCycle ticks)
 		)
@@ -340,13 +359,11 @@
 				)
 				(mouth setCycle: 0)
 			)
-			(cond
-				(global83
-					(DoAudio audSTOP)
-				)
-				(gModelessDialog
-					(gModelessDialog dispose:)
-				)
+			(if global83
+				(DoAudio audSTOP)
+			)
+			(if gModelessDialog
+				(gModelessDialog dispose:)
 			)
 			(if eyes
 				(eyes setCycle: 0)

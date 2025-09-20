@@ -60,6 +60,7 @@
 			)
 		)
 	)
+	(= isLetter 0)
 	((= newDialog (Dialog new:)) window: gSystemWindow name: {PrintD})
 	(cond
 		((u< [args 0] 1000)
@@ -82,7 +83,7 @@
 				(== (StrAt @msg (+ 1 charIdx)) 74)
 			)
 			(gGame printLang: 1 subtitleLang: 81)
-			(StrSplit @msg @msg {#J}) ; StrSplit() but symbol not present
+			(StrSplit @msg @msg {#J})
 			(gGame printLang: printLang subtitleLang: subtitleLang)
 			(StrAt @msg charIdx 0)
 			(if (OneOf 81 printLang subtitleLang)
@@ -384,8 +385,8 @@
 		(= char1 (StrAt @argStr 0))
 		(= newValue -1)
 		(cond
-			; if arg starts with a number, convert string to integer
-			((and (>= char1 48) (<= [char1 0] 57))
+			; if arg starts with a number or '-', convert string to integer
+			((or (and (>= char1 48) (<= [char1 0] 57)) (== char1 45))
 				(= newValue (ReadNumber @argStr))
 			)
           	; otherwise, translate string to a selector used in Print function

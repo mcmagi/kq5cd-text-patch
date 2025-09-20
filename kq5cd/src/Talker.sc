@@ -82,6 +82,7 @@
 		; clean up any existing dialogs before calling show
 		(if gModelessDialog
 			(gModelessDialog dispose:)
+			(= gModelessDialog 0)
 		)
 		(self show:)
 		(if (>= argc 4)
@@ -364,6 +365,7 @@
 			)
 			(if gModelessDialog
 				(gModelessDialog dispose:)
+				(= gModelessDialog 0)
 			)
 			(if eyes
 				(eyes setCycle: 0)

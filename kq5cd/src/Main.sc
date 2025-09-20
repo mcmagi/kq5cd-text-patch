@@ -808,7 +808,7 @@
 	)
 )
 
-(procedure (Say resource timerSeconds &tmp cursor event audioTime volume)
+(procedure (Say resource caller &tmp cursor event audioTime volume)
 	(DoAudio audSTOP)
 	(if (and (not (== argc 3)) (not global401))
 		(= global401 1)
@@ -819,15 +819,17 @@
 	)
 	(cond
 		((and (== argc 2) (not (== argc 3)))
-			(SpeakTimer theVol: volume set60ths: timerSeconds (DoAudioWithText resource))
+			; 2 argments = start audio and return timer
+			(SpeakTimer theVol: volume set60ths: caller (DoAudioWithText resource))
 		)
 		((== argc 3)
+			; 3 arguments = start audio and return ticks
 			(DoAudioWithText resource)
 		)
 		(else
+			; 1 argument = start audio and block until audio finishes or is interrupted by an event
 			(= cursor (gGame setCursor: speakCursor))
 			(= audioTime (+ (DoAudioWithText resource) 2 (GetTime)))
-			; loop until audio time elapses or there is a button event
 			(while
 				(and
 					(or
@@ -898,6 +900,8 @@
 
 (procedure (PrintForAudio resource withLetterIcon &tmp module entry [msg 400] [selector 50] result)
 	(= result -1)
+	(= [msg 0] 0)
+	(= [selector 0] 0)
 
 	; map resource number to module/entry (and flag narrator)
 	(cond
@@ -944,7 +948,7 @@
 	)
 
 	; debugging
-	;(Printf "%d -> %d:%d (%d)" resource module entry narrator)
+	;(Printf "%d -> %d:%d" resource module entry)
 
 	; lookup corresponding message and print it if present
 	(if (> module 0)
@@ -954,18 +958,28 @@
 			(if (<= argc 2)
 				(GetFarText (+ module 1) entry @selector)
 			)
-			(if withLetterIcon
-				; show message with first letter as icon (reserved for narrator)
-				(= result (PrintDC @msg 0 &rest #selector @selector))
-				;(= result (PrintDC @msg 0 &rest))
+
+			(if (> (StrLen @selector) 0)
+				; with selector
+				(= result (PrintMessageStr @msg withLetterIcon #selector @selector &rest))
 			else
-				; show message
-				(= result (Print @msg &rest #selector @selector))
+				; without selector
+				(= result (PrintMessageStr @msg withLetterIcon &rest))
 			)
 		)
 	)
 
 	(return result)
+)
+
+(procedure (PrintMessageStr msg withLetterIcon)
+	(if withLetterIcon
+		; show message with first letter as icon (reserved for narrator)
+		(PrintDC msg 0 &rest)
+	else
+		; show message
+		(Print msg &rest)
+	)
 )
 
 (procedure (PrintDC moduleOrMsg entry &tmp char1 char2 loop cel [msg 400] [newmsg 400])

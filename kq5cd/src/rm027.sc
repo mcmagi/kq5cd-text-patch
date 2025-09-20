@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 27)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use CodeCue)
@@ -13,6 +13,7 @@
 (use Motion)
 (use Actor)
 (use System)
+(use Timer)
 
 (public
 	rm027 0
@@ -373,7 +374,7 @@
 						(== ((gInventory at: 3) owner:) 27) ; Golden_Needle
 					)
 					(gGlobalAudio stop:)
-					(Say 400)
+					(Say 400 self)
 					(gEgo
 						normal: 1
 						view: 2
@@ -461,10 +462,46 @@
 	(method (changeState newState)
 		(switch (= state newState)
 			(0
+			    ; the ants' song
 				(Say 9998 self)
+				(lyricScript init: client)
 			)
 			(1
+			    ; callback on client script when done
 				(client cue:)
+				(self dispose:)
+			)
+		)
+	)
+)
+
+(instance lyricScript of Script
+	(properties)
+	
+	(method (changeState newState)
+		(switch (= state newState)
+			(0
+			    ; wait 4 seconds before starting lyrics
+				(Timer set: self 4)
+			)
+			(1
+				(Print 340 10 #at 20 20 #dispose) ; "We're the ants led by King Antony"
+				(Timer set: self 4)
+			)
+			(2
+				(Print 340 11 #at 20 20 #dispose) ; "We're coming to help King Graham!"
+				(Timer set: self 4)
+			)
+			(3
+				(Print 340 10 #at 20 20 #dispose) ; "We're the ants led by King Antony"
+				(Timer set: self 4)
+			)
+			(4
+				(Print 340 11 #at 20 20 #dispose) ; "We're coming to help King Graham!"
+				(Timer set: self 4)
+			)
+			(5
+				(Print 340 12 #at 20 20 #time 16 #dispose) ; "(Whistling)"
 				(self dispose:)
 			)
 		)

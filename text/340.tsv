@@ -1,10 +1,18 @@
 Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio)
 4000			0	
-4001	200 16		24	(mumbling and muttering)
-4002	200 16		24	(mumbling and muttering)
-4003	200 16		24	(mumbling and muttering)
-4004	200 16		24	(mumbling and muttering)
-4005	200 16		24	(mumbling and muttering)
+4001	200 16		24	(Mumbling and muttering)
+4002	200 16		24	(Mumbling and muttering)
+4003	200 16		24	(Mumbling and muttering)
+4004	200 16		24	(Mumbling and muttering)
+4005	200 16		24	(Mumbling and muttering)
 4006			0	
 4007	4 24	#at 150 20 #time 3	21	Outta my way, mister!
 4008	4 24	#at 150 20 #time 3	9	Look out!
+4009				
+4010	n/a	#at 20 20 #dispose		We're the ants led by King Antony
+4011	n/a	#at 20 20 #dispose		We're coming to help King Graham!
+4012	n/a	#at 20 20 #dispose		(Whistling)
+4013	n/a	#at 180 10 #dispose		How will I find this heart of mine?
+4014	n/a	#at 180 10 #dispose		Taken from me for some tim
+4015	n/a	#at 180 10 #dispose		Here I stand near my pool of tears
+4016	n/a	#at 180 10 #dispose		Here I'll stay throughout the years

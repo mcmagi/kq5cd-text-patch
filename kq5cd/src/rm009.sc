@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 9)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use CodeCue)
@@ -15,6 +15,7 @@
 (use Motion)
 (use Actor)
 (use System)
+(use Timer)
 
 (public
 	rm009 0
@@ -780,6 +781,7 @@
 				)
 				(= local151 1)
 				(Say 9999 self)
+				(lyricScript init: client)
 			)
 			(2
 				(HandsOn)
@@ -789,6 +791,35 @@
 			)
 		)
 	)
+)
+
+(instance lyricScript of Script
+	(properties)
+	
+	(method (changeState newState)
+		(switch (= state newState)
+			(0
+			    ; wait 4 seconds before starting lyrics
+				(Timer set: self 4)
+			)
+			(1
+				(Print 340 13 #at 180 10 #dispose) ; "How will I find this heart of mine?"
+				(Timer set: self 5)
+			)
+			(2
+				(Print 340 14 #at 180 10 #dispose) ; "Taken from me for some time"
+				(Timer set: self 5)
+			)
+			(3
+				(Print 340 15 #at 180 10 #dispose) ; "Here I stand near my pool of tears"
+				(Timer set: self 5)
+			)
+			(4
+				(Print 340 16 #at 180 10 #time 7 #dispose) ; "Here I'll stay throughout the years"
+				(self dispose:)
+			)
+		)
+	)	
 )
 
 (instance pond of RFeature

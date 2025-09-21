@@ -867,32 +867,34 @@
 	; play audio
 	(= time (DoAudio audPLAY resource))
 
-	; narrator at 0-858 or 9050-9076
-	(= narrator	
-		(or
-			(<= resource 858)
-			(and (>= resource 9050) (< resource 9100))
+	(if (> time 0)
+		; narrator at 0-858 or 9050-9076
+		(= narrator	
+			(or
+				(<= resource 858)
+				(and (>= resource 9050) (< resource 9100))
+			)
 		)
-	)
-
-	; do we already have an icon parameter argument?
-	(= hasIconParam
-		(and (> argc 1) (== [resource 1] #icon))
-	)
-
-	(= result
-		(PrintForAudio
-			resource
-			; show letter icon if narrator and we don't already have an icon
-			(and narrator (not hasIconParam))
-			&rest
+	
+		; do we already have an icon parameter argument?
+		(= hasIconParam
+			(and (> argc 1) (== [resource 1] #icon))
 		)
-	)
-
-	; if we printed a dialog, then stop audio when print window closes
-	; ... unless we printed a modeless dialog
-	(if (and (!= result -1) (!= result gModelessDialog))
-		(DoAudio audSTOP)
+	
+		(= result
+			(PrintForAudio
+				resource
+				; show letter icon if narrator and we don't already have an icon
+				(and narrator (not hasIconParam))
+				&rest
+			)
+		)
+	
+		; if we printed a dialog, then stop audio when print window closes
+		; ... unless we printed a modeless dialog
+		(if (and (!= result -1) (!= result gModelessDialog))
+			(DoAudio audSTOP)
+		)
 	)
 
 	(return time)
@@ -902,6 +904,7 @@
 	(= result -1)
 	(= [msg 0] 0)
 	(= [selector 0] 0)
+	(= module 0)
 	(= entry 0)
 
 	; map resource number to module/entry (and flag narrator)
@@ -909,7 +912,6 @@
 		((>= resource 9990)
 			; 9996-9999 -> no mapping (musical interludes)
 			; 10101-10126 -> no mapping (intro/outro with music)
-			(= module -1)
 		)
 		((>= resource 9000)
 			; 9000-9254 -> module 390: 0-254
@@ -919,7 +921,6 @@
 		((>= resource 7700)
 			; 7771-7772,7777 -> no mapping (sound effects)
 			; 8018-8200,8810-8898 -> no mapping (sound effects)
-			(= module -1)			
 		)
 		((>= resource 7000)
 			; 7011-7067 -> module 370: 11-67
@@ -1827,8 +1828,11 @@
 	(properties)
 	
 	(method (play param1)
-		(PrintForAudio number false)
 		(super play: param1)
+
+		(if (not stopped)
+			(PrintForAudio number false)
+		)
 	)
 )
 

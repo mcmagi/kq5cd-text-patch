@@ -902,6 +902,7 @@
 	(= result -1)
 	(= [msg 0] 0)
 	(= [selector 0] 0)
+	(= entry 0)
 
 	; map resource number to module/entry (and flag narrator)
 	(cond
@@ -1824,6 +1825,11 @@
 
 (instance globalAudio of Audio
 	(properties)
+	
+	(method (play param1)
+		(PrintForAudio number false)
+		(super play: param1)
+	)
 )
 
 (instance FtrInit of Code

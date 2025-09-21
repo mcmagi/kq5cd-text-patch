@@ -56,9 +56,9 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5054	204 12	#at 10 10 #dispose	54	Hmmmm. I think it's in the small cupboard. Look there.
 5055	204 13	#at 10 10 #dispose	42	I haven't forgotten. It's all ready to go.
 5056			0	
-5057	91 0	#dispose #at 10 120	30	Where'd you find HIM, Minotta?
-5058	91 1	#dispose #at 120 120	52	We found him on the beach. Isn't he luscious? Yummm!
-5059	91 2	#dispose #at 10 120	74	I don't know... he doesn't look like MY type. What do YOU think, Cruleena?
+5057	91 0	#at 10 120 #dispose	30	Where'd you find HIM, Minotta?
+5058	91 1	#at 120 120 #dispose	52	We found him on the beach. Isn't he luscious? Yummm!
+5059	91 2	#at 10 120 #dispose	74	I don't know... he doesn't look like MY type. What do YOU think, Cruleena?
 5060	90 1	#at 225 100 #width 70 #dispose	75	I think he looks too old and tough. I like my MEALS to be young and tender.
 5061	90 2	#at 220 10 #width 80 #dispose	68	Don't be so picky. I'm tired of fish. I haven't had a man in months.
 5062	90 3	#at 10 10 #width 120 #dispose	62	Yes, you did. I saw you steal a man off a raft just last week!
@@ -88,7 +88,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5086	24 6	67 8 114 25 6	30	How do I know I can trust you?
 5087	24 7	67 144 101 25 7	48	I give you my word. An elf NEVER breaks his word
 5088	24 8	67 8 105 25 6	52	Well...it's against my better judgement, but...okay.
-5089	24 9	#at 110 140 #dispos	36	Move over, Rocky. You're in our way!
+5089	24 9	#at 110 140 #dispose	36	Move over, Rocky. You're in our way!
 5090	24 10	#at 30 30 #dispose	11	Uh...sorry.
 5091	24 15	67 8 106 25 4	19	Hello? Who's there?
 5092	24 16	67 8 106 25 5	36	I say...who's there? Please help me.
@@ -400,7 +400,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5398			0	
 5399			0	
 5400	85 0	67 20 20 25 10 70 260	117	You know dat job we pulled yesterday? Where's da rest of da loot...huh? I think one o' you guys is holdin' out on me!
-5401	85 2	67 20 20 25 8	63	Gentlemen, please excuse me. I didn't mean to interrupt your...
+5401	85 2	67 20 20 25 8	62	Gentlemen, please excuse me. I didn't mean to interrupt you...
 5402	85 3	67 20 20 25 7	40	Da inn is full. Ain't got no more rooms.
 5403	85 4	#at 20 20 #dispose	81	Hey, boss! Dis guy looks like a real troublemaker! Whaddya want me ta do wid 'im?
 5404	85 5	#at 20 20 #dispose	12	Rub 'im out!
@@ -700,12 +700,12 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5698			0	
 5699			0	
 5700			0	
-5701	n/a	#at 150 20 #time 3 #dispose	9	Good day!
-5702	n/a	#at 150 20 #time 3 #dispose	6	Hello!
-5703	n/a	#at 150 20 #time 3 #dispose	14	How do you do?
-5704	n/a	#at 150 20 #time 3 #dispose	19	Nice day, isn't it?
-5705	n/a	#at 150 20 #time 3 #dispose	31	Top o' the mornin' to you, sir!
-5706	n/a	#at 150 20 #time 3 #dispose	10	Hi mister!
+5701	n/a	#at 150 20 #time 3	9	Good day!
+5702	n/a	#at 150 20 #time 3	6	Hello!
+5703	n/a	#at 150 20 #time 3	14	How do you do?
+5704	n/a	#at 150 20 #time 3	19	Nice day, isn't it?
+5705	n/a	#at 150 20 #time 3	31	Top o' the mornin' to you, sir!
+5706	n/a	#at 150 20 #time 3	10	Hi mister!
 5707			0	
 5708			0	
 5709			0	

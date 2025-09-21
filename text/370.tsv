@@ -37,7 +37,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 7035	54 6	67 100 10 25 7	61	"No, that's a good idea, Cedric. You be the lookout out here!
 7036	89 2	67 180 10 25 4	23	Brace yourself, Cedric!
 7037	214 0		21	Whew! That was close!
-7038	214 1		12	Open sesame!
+7038	214 1	#at 20 20 #dispose	12	Open sesame!
 7039	214 2	#at 10 10 #time 5	24	Oh, no! The staff broke!
 7040	1 1	67 90 90 25 10	106	Please don't call me Your Majesty, Cedric. It's much too formal. I'd like it if you'd just call me Graham.
 7041	1 3	67 90 90 25 6	39	Well then, let's be on our way, Cedric.
@@ -55,7 +55,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 7053	31 1 / 34 0	#at 20 20 #dispose	18	Aaaaiiiieeeeeeee!!
 7054			0	
 7055			0	
-7056			0	
+7056	n/a	#at 20 20 #time 7 #dispose	36	Help! Hel... (gurgle, cough, gurgle)
 7057			0	
 7058	n/a	#at 140 100 #time 3 #dispose	14	(cough, cough)
 7059	n/a		37	Ugh, a dead fish. Maybe I can use it.

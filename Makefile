@@ -6,7 +6,7 @@ GAME_DIR=kq5cd
 BUILD_DIR=build
 PATCH_DIR=${BUILD_DIR}/patch
 TEXT_DIR=text
-SRC_DIR=src
+SRC_DIR=${GAME_DIR}/src
 TSV_2_TEX=${PY} tsv2tex.py
 
 ZIP_FILE=${BUILD_DIR}/kq5cd-text-patch-${VERSION}.zip
@@ -24,14 +24,11 @@ TEX_FILES=${PATCH_DIR}/300.tex \
 		  ${PATCH_DIR}/390.tex \
 		  ${PATCH_DIR}/391.tex
 
-SRC_FILES=${SRC_DIR}/sci.kq5.sh \
-		  ${SRC_DIR}/Main.sc \
-		  ${SRC_DIR}/Interface.sc \
-		  ${SRC_DIR}/Talker.sc
-
-SCR_FILES=${PATCH_DIR}/0.SCR \
-		  ${PATCH_DIR}/255.SCR \
-		  ${PATCH_DIR}/928.SCR
+SCR_FILES=${PATCH_DIR}/0.scr \
+		  ${PATCH_DIR}/9.scr \
+		  ${PATCH_DIR}/27.scr \
+		  ${PATCH_DIR}/255.scr \
+		  ${PATCH_DIR}/928.scr
 
 all: text script ${ZIP_FILE}
 
@@ -43,14 +40,6 @@ import:
 		${INSTALL_DIR}/RESOURCE.* ${INSTALL_DIR}/AUDIO001.* ${INSTALL_DIR}/SCI*.* ${INSTALL_DIR}/SIERRA.EXE \
 		${INSTALL_DIR}/INTERP.TXT ${INSTALL_DIR}/VERSION ${GAME_DIR}
 
-src: ${SRC_FILES}
-
-${SRC_DIR}/%.sh: ${GAME_DIR}/src/%.sh
-	cp $< $@
-
-${SRC_DIR}/%.sc: ${GAME_DIR}/src/%.sc
-	cp $< $@
-
 text: ${TEX_FILES}
 
 ${PATCH_DIR}/%0.tex ${PATCH_DIR}/%1.tex: ${TEXT_DIR}/%0.tsv
@@ -58,7 +47,7 @@ ${PATCH_DIR}/%0.tex ${PATCH_DIR}/%1.tex: ${TEXT_DIR}/%0.tsv
 
 script: ${SCR_FILES}
 
-${PATCH_DIR}/%.scr: ${GAME_DIR}/%.scr
+${PATCH_DIR}/%.scr: ${SRC_DIR}/%.scr
 	cp $< $@
 
 ${ZIP_FILE}: ${TEX_FILES} ${SCR_FILES}

@@ -1,8 +1,9 @@
 # exclude game files, but include script source and SCI Companion config
 /kq5cd/*
 !/kq5cd/game.ini
-!/kq5cd/src
-/kq5cd/src/*.sco
+/kq5cd/src/*
+!/kq5cd/src/*.sc
+!/kq5cd/src/*.sh
 
 # exclude ide files
 /.idea/

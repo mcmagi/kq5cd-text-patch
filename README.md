@@ -10,26 +10,77 @@ This patch re-adds the text dialog functionality to the game scripts, using the 
 
 ## Screenshots ##
 
-<img width="515" height="300" alt="scummvm-kq5-cd-1-00006" src="https://github.com/user-attachments/assets/0d838634-3d48-4f65-8124-f95860928257" />
-<img width="515" height="300" alt="scummvm-kq5-cd-1-00005" src="https://github.com/user-attachments/assets/6e52b889-da4a-489a-83f2-73388c86ef16" />
+<table style="border: none">
+  <tr>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00006" src="https://github.com/user-attachments/assets/0d838634-3d48-4f65-8124-f95860928257" />
+    </td>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00005" src="https://github.com/user-attachments/assets/6e52b889-da4a-489a-83f2-73388c86ef16" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00004" src="https://github.com/user-attachments/assets/d450d826-1b7f-45b3-a771-39631eb01c36" />
+    </td>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00000" src="https://github.com/user-attachments/assets/e799eaf6-d770-49c8-b471-7102fbc2234d" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00002" src="https://github.com/user-attachments/assets/cb4bc06c-d085-4cc1-9181-e10313808dce" />
+    </td>
+    <td>
+      <img width="515" height="300" alt="scummvm-kq5-cd-1-00001" src="https://github.com/user-attachments/assets/496b0ad3-9ef2-4bea-8553-be55ab114642" />
+    </td>
+  </tr>
+</table>
 
 ## Status ##
 
 What works:
+
 * Text dialogs for the narrator, including the decorative first letter
-* Text dialogs for actor talk windows with the dialog box positioned relative to talker window
-* Support for custom appearance per text box (positioning, width, timeout, etc) used in the Disk version
+* Text dialogs for actor portraits, with the dialog box positioned relative to the portrait
+* Text dialog behavior (positioning, width, timeout, imagery, etc) used in the Disk version
 * Restore/Restart/Quit text dialogs shown at death have the text re-added to them
 
 Still TODO:
 * Intro
 * Outro
-* Genie cutscene
 
 ## Installation ##
 
-Unpack the zip file into your game directory and run the game. It works with both DOS and ScummVM. However, existing saved games may not be backward compatible.
+Unpack the zip file into your game directory and run the game. The file `0.SCR` will be overwritten, so you may want to back it up first.
+
+It works with both DOS and ScummVM. However, existing saved games will not be backward compatible.
 
 ## Building ##
 
-TBD
+You'll need to use SCI Companion to build and export the script files.
+
+### Script Files ###
+
+Copy the game files to the `kq5cd` directory.
+
+Compile the following files:
+* Main.sc
+* Interface.sc
+* Talker.sc
+* rm009.sc
+* rm027.sc
+
+Then export them to the `kq5cd/src` directory
+* Main.sc -> 0.scr
+* rm009.sc -> 9.scr
+* rm027.sc -> 27.scr
+* Interface.sc -> 255.scr
+* Talker.sc -> 928.scr
+
+### Building the Package ###
+
+Run `make all`. This will:
+* Generate the `tex` (text resource) files from the `tsv` sources
+* Copy in the exported `scr` files from above
+* Package it together as a zip

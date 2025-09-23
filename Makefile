@@ -1,6 +1,6 @@
 INSTALL_DIR=D:/games/Sierra/KQ5CD
 PY=python
-VERSION=0.0.2
+VERSION=0.0.3-alpha
 
 GAME_DIR=kq5cd
 BUILD_DIR=build
@@ -28,6 +28,7 @@ SCR_FILES=${PATCH_DIR}/0.scr \
 		  ${PATCH_DIR}/9.scr \
 		  ${PATCH_DIR}/27.scr \
 		  ${PATCH_DIR}/255.scr \
+		  ${PATCH_DIR}/604.scr \
 		  ${PATCH_DIR}/928.scr
 
 all: text script ${ZIP_FILE}

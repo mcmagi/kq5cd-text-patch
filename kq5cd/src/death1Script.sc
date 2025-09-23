@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 604)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use CodeCue)
 (use Motion)
@@ -322,7 +322,9 @@
 			)
 			(5
 				(if (not (IsFlag 55))
-					(cls)
+					; This immediately removed the text box printed above for resource 3000.
+					; Otherwise, it doesn't appear to be providing any benefit
+					;(cls)
 					(= seconds 2)
 				else
 					(= cycles 1)

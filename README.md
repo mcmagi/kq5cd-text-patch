@@ -70,12 +70,14 @@ Compile the following files:
 * Talker.sc
 * rm009.sc
 * rm027.sc
+* deathScript1.sc
 
 Then export them to the `kq5cd/src` directory
 * Main.sc -> 0.scr
 * rm009.sc -> 9.scr
 * rm027.sc -> 27.scr
 * Interface.sc -> 255.scr
+* deathScript1.sc -> 604.scr
 * Talker.sc -> 928.scr
 
 ### Building the Package ###

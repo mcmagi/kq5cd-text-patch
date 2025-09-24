@@ -1,8 +1,8 @@
 Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio)
 9000	55 0	#at -1 20 #dispose	11	Duh...DINK!
-9001	n/a		17	Dink! Dink! Dink!
-9002	n/a		5	Dink!
-9003	55 16		17	Dink! Dink! Dink!
+9001	n/a	#at -1 20 #dispose	17	Dink! Dink! Dink!
+9002	n/a	#at -1 20 #dispose	5	Dink!
+9003	55 16	#at -1 20 #dispose	17	Dink! Dink! Dink!
 9004			0	
 9005			0	
 9006			0	

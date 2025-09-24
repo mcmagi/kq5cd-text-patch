@@ -243,7 +243,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 241	10 23		57	A young gnome happily plays with an exquisite marionette.			
 242	10 25		118	An old grandfather gnome sits contentedly on an old stump and smokes a large pipe while watching his grandson at play.			
 243	10 29		99	Sitting on a stool in front of his house, a young gnome happily plays with an exquisite marionette.			
-244	10 33		92	In the distance to the north, Graham can see a lovely willow tree surrounded by a small pond.			
+244	10 33		93	In the distance to the north, Graham can see a lovely willow tree surrounded by a small pond.			
 245	10 34		57	Graham can see a small pond in the distance to the north.			
 246	10 15		67	Graham attempts to open the little window but finds it bolted shut.			
 247	10 16		65	Graham tries to open the small door but finds it securely locked.			
@@ -1122,7 +1122,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 1120	46 35	#at 100 10 #time 5	22	You've got to help me!			
 1121	46 36	#at 100 10 #time 5	38	Please! Take the time to listen to me.			
 1122	46 37	#at 100 10 #time 5	37	I need help to find Mordack's island.			
-1123	46 38	#at 100 10 #time 5	36	I think I'm lost. I need your help."			
+1123	46 38	#at 100 10 #time 5	35	I think I'm lost. I need your help.			
 1124	46 39	#at 100 10 #time 5	51	I think you can help me...if you would only listen.			
 1125			0				
 1126			0				
@@ -1172,7 +1172,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 1170	206 29	#at 8 106 #width 160 #time 5	23	Will a golden heart do?			
 1171	206 30	#at 8 8 #width 160 #time 6	34	I hope you enjoy your custard pie.			
 1172	206 31	#at 8 8 #width 160 #time 4	5	Sure!			
-1173	206 32	#at 8 106 #width 160 #time 6	21	Oh, I'm sure I will!"			
+1173	206 32	#at 8 106 #width 160 #time 6	20	Oh, I'm sure I will!			
 1174	206 33	#at 8 8 #width 160 #time 5	18	Okay. Here you go.			
 1175	206 10	#at 8 8 #width 160 #time 11	128	Welcome back to our bakehouse, traveler! Of course ALL of our wares are wonderful, but don't forget our special on custard pies.			
 1176	206 11	#at 8 8 #width 160 #time 8	65	Welcome back to our bakehouse! I hope you enjoy your custard pie.			

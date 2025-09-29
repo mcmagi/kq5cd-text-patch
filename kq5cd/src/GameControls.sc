@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 934)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use IconBar)
@@ -391,3 +391,7 @@
 	)
 )
 
+; symbol not present in vocab.999
+(procedure (MoveCursor)
+	(Intersections &rest)
+)

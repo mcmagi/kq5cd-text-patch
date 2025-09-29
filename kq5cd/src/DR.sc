@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 975)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use Save)
@@ -17,21 +17,23 @@
 
 (procedure (FakeInput theTime &tmp event) ; UNUSED
 	(if theTime
-		(Print &rest #title LOOKUP_ERROR #time theTime)
+		(Print &rest #title {LOOKUP_ERROR} #time theTime)
 	)
 	(Format (View _approachVerbs:) &rest)
 	((= event (View notFacing:)) type: 128)
 	(Parse (View _approachVerbs:) event)
-	(View said: event)
+	;(View said: event)
 	(event quitGame:)
 )
 
 (procedure (FakeKey theKey &tmp event) ; UNUSED
-	(View prev: ((View notFacing:) type: 4 message: theKey showStr:))
+	; doesn't compile
+	;(View prev: ((View notFacing:) type: 4 message: theKey showStr:))
 )
 
 (procedure (FakeDir theDir &tmp event) ; UNUSED
-	(View prev: ((View notFacing:) type: 64 message: theDir showStr:))
+	; doesn't compile
+	;(View prev: ((View notFacing:) type: 64 message: theDir showStr:))
 )
 
 (procedure (FakeMouse theType theX theY theModifiers &tmp event) ; UNUSED
@@ -43,14 +45,16 @@
 	)
 	(SetCursor gTheCursor 1 (event x:) (event y:))
 	(LocalToGlobal event)
-	(View prev: event)
+	; doesn't compile
+	;(View prev: event)
 )
 
 (instance DR of SRDialog
 	(properties)
 
 	(method (flags)
-		(super flags:)
+		; doesn't compile
+		;(super flags:)
 		(SetCursor gTheCursor 1 320 200)
 		(self register: (ScriptID (+ gCurRoomNum global55)))
 		(Dialog time: global60)
@@ -65,7 +69,8 @@
 		(Dialog time: 0)
 		(elements quitGame:)
 		(DisposeScript (+ gCurRoomNum global55))
-		(super quitGame:)
+		; doesn't compile
+		;(super quitGame:)
 	)
 )
 

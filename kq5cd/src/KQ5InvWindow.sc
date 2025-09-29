@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 757)
-(include sci.sh)
+(include sci.kq5.sh)
 (use BertaWindow)
 
 (class KQ5InvWindow of BertaWindow

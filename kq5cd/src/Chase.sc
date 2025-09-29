@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 972)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Motion)
 
 (class Chase of Motion

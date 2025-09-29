@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 680)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use KQ5Room)
 (use Sync)
@@ -136,7 +136,7 @@
 					loop: 0
 					cel: 0
 					cycleSpeed: 5
-					setScript: (muschaMove)
+					setScript: muschaMove
 					posn: 127 105
 				)
 				(wArm hide:)

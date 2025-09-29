@@ -1,8 +1,9 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 980)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
+(use Actor)
 
 (procedure (InitSurrogate e s)
 	(e initialized: 1)
@@ -17,7 +18,7 @@
 	)
 )
 
-(class TalkingExtra
+(class TalkingExtra of Actor
 	(properties
 		x 0
 		y 0

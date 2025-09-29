@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 889)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Interface)
 (use Sound)
@@ -94,7 +94,8 @@
 				(proc0_19)
 			)
 			(4352
-				(Unknown_Class_100 doit:)
+				; doesn't compile
+				;(Unknown_Class_100 doit:)
 			)
 			(16128
 				(if (IsFlag 0)

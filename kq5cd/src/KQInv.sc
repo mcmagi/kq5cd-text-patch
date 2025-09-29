@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 758)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use KQ5InvWindow)
 (use KQCursor)
@@ -308,7 +308,7 @@
 			(3
 				(if (== global312 -1)
 					(= global312 3)
-					(proc0_30 131 891 0 6)
+					(SayWithIcon 131 891 0 6)
 					(gInventory hide:)
 					(self loop: 4 cel: 1)
 					(gEgo get: 14) ; Emeralds

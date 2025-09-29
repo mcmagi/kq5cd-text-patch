@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 978)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Feature)
 (use Actor)
 

@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 936)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Window)
 
 (procedure (DrawBeveledWindow t l b r theColor topColor leftColor bottomColor rightColor theBevelWid theShadowWid thePri theMaps &tmp savePort i)

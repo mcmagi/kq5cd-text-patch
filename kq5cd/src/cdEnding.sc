@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 670)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use AudioScript)
 (use KQ5Room)
@@ -1149,7 +1149,7 @@
 					view: 916
 					loop: 9
 					setPri: 10
-					cel: 0 signal 16400
+					cel: 0 signal: 16400
 					posn: 93 110
 				)
 			)

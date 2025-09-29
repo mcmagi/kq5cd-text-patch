@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 681)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use KQ5Room)
 (use Sync)

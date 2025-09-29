@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 650)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use AudioScript)
 (use LoadMany)
@@ -398,4 +398,3 @@
 (instance audioTrak of MonoAudioProp
 	(properties)
 )
-

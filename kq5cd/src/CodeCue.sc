@@ -1,7 +1,7 @@
 ;;; Sierra Script 1.0 - (do not remove this comment)
 ;;; Decompiled by sluicebox
 (script# 762)
-(include sci.sh)
+(include sci.kq5.sh)
 (use Main)
 (use Talker)
 (use Actor)
@@ -280,3 +280,7 @@
 	)
 )
 
+; symbol not present in vocab.999
+(procedure (MoveCursor)
+	(Intersections &rest)
+)

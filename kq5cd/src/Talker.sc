@@ -8,6 +8,7 @@
 (use RandCycle)
 (use Actor)
 (use System)
+(use TextMod)
 
 (class RTRandCycle of RandCycle
 	(properties)

@@ -4,6 +4,7 @@
 (include sci.sh)
 (use Main)
 (use System)
+(use TextMod)
 
 (public
 	Print 0
@@ -367,119 +368,6 @@
 (procedure (Printf &tmp [str 500])
 	(Format @str &rest)
 	(Print @str)
-)
-
-(procedure (ParseSelector selectorStr &tmp startIdx endIdx argLen [argStr 20] newArgsList newArgsCtr newValue useValue char1)
-	; init array
-	(for ((= startIdx 0)) (< startIdx 20) ((++ startIdx))
-		(= [argStr startIdx] 0)
-	)
-
-	(= newArgsList (NewList))
-	(= newArgsCtr 0)
-	(= startIdx 0)
-
-	; loop through each argument in selector string until we hit terminator
-	(repeat
-		; locate arg by finding next space (or terminator) in string
-		(= endIdx (StrChr selectorStr 32 startIdx))
-		(= argLen (- endIdx startIdx))
-
-		; extract argument from selector string (and ensure it's terminated)
-		(StrCpy @argStr (+ selectorStr startIdx) argLen)
-		(StrAt @argStr argLen 0)
-
-		; map to a value based on first character
-		(= char1 (StrAt @argStr 0))
-		(= newValue 0)
-		(= useValue true)
-		(cond
-			; if arg starts with a number or '-', convert string to integer
-			((or (and (>= char1 48) (<= [char1 0] 57)) (== char1 45))
-				(= newValue (ReadNumber @argStr))
-			)
-          	; otherwise, translate string to a selector used in Print function
-           	((== (StrCmp @argStr {#time}) STRINGS_EQUAL)
-           		(= newValue #time)
-			)
-           	((== (StrCmp @argStr {#mode}) STRINGS_EQUAL)
-           		(= newValue #mode)
-			)
-           	((== (StrCmp @argStr {#font}) STRINGS_EQUAL)
-           		(= newValue #font)
-			)
-           	((== (StrCmp @argStr {#window}) STRINGS_EQUAL)
-           		(= newValue #window)
-			)
-           	((== (StrCmp @argStr {#edit}) STRINGS_EQUAL)
-           		(= newValue #edit)
-			)
-           	((== (StrCmp @argStr {#at}) STRINGS_EQUAL)
-           		(= newValue #at)
-			)
-           	((== (StrCmp @argStr {#width}) STRINGS_EQUAL)
-           		(= newValue #width)
-			)
-           	((== (StrCmp @argStr {#title}) STRINGS_EQUAL)
-           		(= newValue #title)
-			)
-           	((== (StrCmp @argStr {#button}) STRINGS_EQUAL)
-           		(= newValue #button)
-			)
-           	((== (StrCmp @argStr {#icon}) STRINGS_EQUAL)
-           		(= newValue #icon)
-			)
-           	((== (StrCmp @argStr {#draw}) STRINGS_EQUAL)
-           		(= newValue #draw)
-			)
-           	((== (StrCmp @argStr {#dispose}) STRINGS_EQUAL)
-           		(= newValue #dispose)
-			)
-           	((== (StrCmp @argStr {#first}) STRINGS_EQUAL)
-           		(= newValue #first)
-			)
-           	((== (StrCmp @argStr {#letter}) STRINGS_EQUAL)
-           		(= newValue #letter)
-			)
-           	((== (StrCmp @argStr {#dontErase}) STRINGS_EQUAL)
-           		; TODO: #dontErase
-           		(= useValue false)
-			)
-			(else
-				(= useValue false)
-			)
-		)
-
-		; if value found, add to args list
-		(if useValue
-			;(Printf "ParseSelector: %s -> arg(%d)=%d" @argStr newArgsCtr newValue)
-			(AddToEnd newArgsList (NewNode newValue newArgsCtr))
-			(++ newArgsCtr)
-		)
-
-		; break out if we hit the end of the string
-		(breakif (== (StrAt selectorStr endIdx) 0))
-
-		; advance startIdx to end of current arg (+1 for space)
-		(= startIdx (+ endIdx 1))
-	)
-	(return newArgsList)
-)
-
-(procedure (StrChr str chr fromIdx &tmp idx len)
-	; get starting position
-	(if (< argc 3)
-		(= fromIdx 0)
-	)
-	(= len (StrLen str))
-
-	; find first occurrance of chr
-	(for ((= idx fromIdx)) (< idx len) ((++ idx))
-		(if (== (StrAt str idx) chr)
-			(return idx)
-		)
-	)
-	(return idx)
 )
 
 (class MenuBar of Obj

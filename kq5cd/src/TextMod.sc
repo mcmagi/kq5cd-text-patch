@@ -8,8 +8,9 @@
 (use Timer)
 
 (public
-	PrintScript 0
-	SayTimer 1
+	DoAudioWithText 0
+	PrintForAudio 1
+	ParseSelector 2
 )
 
 (local
@@ -110,6 +111,7 @@
 	                      $5100 916  ; "Thank you, sir. I appreciate all you've done for me."
 	                      $5200 0]   ; (cls)
 
+	; rm027 -> singScript
 	antsLyricCount = 5
 	[antsLyricData 10] = [-240 4010  ; "We're the ants led by King Antony"
 	                      -210 4011  ; "We're coming to help King Graham!"
@@ -117,6 +119,7 @@
 	                      -210 4011  ; "We're coming to help King Graham!"
 	                      -270 4012] ; (Whistling)
 
+	; rm009 -> sadSongScript
 	willowLyricCount = 4
 	[willowLyricData 8] = [-240 4013  ; "How will I find this heart of mine?"
 	                       -300 4014  ; "Taken from me for some time"
@@ -124,6 +127,269 @@
 	                       -300 4016] ; "Here I'll stay throughout the years"
 )
 
+
+(procedure (DoAudioWithText resource &tmp time result)
+	; play audio
+	(= time (DoAudio audPLAY resource))
+
+	(if (> time 0)
+		(= result (PrintForAudio resource &rest))
+
+		; if we printed a dialog, then stop audio when print window closes
+		; ... unless we printed a modeless dialog
+		(if (and (!= result -1) (!= result gModelessDialog))
+			(DoAudio audSTOP)
+		)
+	)
+
+	(return time)
+)
+
+(procedure (PrintForAudio resource &tmp module entry [msg 400] [selector 50] narrator hasIconParam withLetterIcon result)
+	(= result -1)
+	(= [msg 0] 0)
+	(= [selector 0] 0)
+	(= module 0)
+	(= entry 0)
+
+	; map resource number to module/entry (and flag narrator)
+	(cond
+		((>= resource 9990)
+			; 9996-9999 -> run print script for lyrics
+			; 10101-10126 -> run print script for intro/outro
+			(PrintScript run: resource)
+		)
+		((>= resource 9000)
+			; 9000-9254 -> module 390: 0-254
+			(= module 390)
+			(= entry (- resource 9000))
+		)
+		((>= resource 7700)
+			; 7771-7772,7777 -> no mapping (sound effects)
+			; 8018-8200,8810-8898 -> no mapping (sound effects)
+		)
+		((>= resource 7000)
+			; 7011-7067 -> module 370: 11-67
+			(= module 370)
+			(= entry (- resource 7000))
+		)
+		((>= resource 5000)
+			; 5000-5902 -> module 350: 0-902
+			(= module 350)
+			(= entry (- resource 5000))
+		)
+		((>= resource 4000)
+			; 4000-4008 -> module 340: 0-8
+			(= module 340)
+			(= entry (- resource 4000))
+		)
+		((>= resource 3000)
+			; 3000-3090 -> module 330: 0-90
+			(= module 330)
+			(= entry (- resource 3000))
+		)
+		(else
+			; 0-1238 -> module 300: 0-1238 (default)
+			(= module 300)
+			(= entry resource)
+		)
+	)
+
+	; debugging
+	;(Printf "%d -> %d:%d" resource module entry)
+
+	; lookup corresponding message and print it if present
+	(if (> module 0)
+		(GetFarText module entry @msg)
+		(if (> (StrLen @msg) 0)
+			; narrator at 0-858 or 9050-9076
+			(= narrator
+				(or
+					(<= resource 858)
+					(and (>= resource 9050) (< resource 9100))
+				)
+			)
+
+			; do we already have an icon parameter argument?
+			(= hasIconParam
+				(and (> argc 1) (== [resource 1] #icon))
+			)
+
+			; add decorative letter icon if narrator and we don't already have an icon
+			(= withLetterIcon (and narrator (not hasIconParam)))
+
+			; lookup selector string if we didn't pass any selectors
+			(if (<= argc 2)
+				(GetFarText (+ module 1) entry @selector)
+			)
+
+			(if (> (StrLen @selector) 0)
+				; with selector
+				(= result (PrintMessageStr @msg withLetterIcon #selector @selector &rest))
+			else
+				; without selector
+				(= result (PrintMessageStr @msg withLetterIcon &rest))
+			)
+		)
+	)
+
+	(return result)
+)
+
+(procedure (PrintMessageStr msg withLetterIcon)
+	(if withLetterIcon
+		; show message with first letter as icon (reserved for narrator)
+		(PrintDC msg 0 &rest)
+	else
+		; show message
+		(Print msg &rest)
+	)
+)
+
+(procedure (PrintDC moduleOrMsg entry &tmp char1 char2 loop cel [msg 400] [newmsg 400])
+	(if (u< moduleOrMsg 1000)
+		(GetFarText moduleOrMsg entry @msg)
+	else
+		(StrCpy @msg moduleOrMsg)
+	)
+	; get first & second letters
+	(= char1 (StrAt @msg 0))
+	(= char2 (StrAt @msg 1))
+	; check if first letter is ascii code A-Z
+	(if (and (>= char1 65) (<= char1 90))
+		; replace first letter with space
+		(StrAt @msg 0 32)
+		; set newmsg = msg prefixed with extra spacing
+		(if (== char2 32)
+			(Format @newmsg {___})
+		else
+			(Format @newmsg {__})
+		)
+		(StrCat @newmsg @msg)
+		; calc index into spritesheet (loop & cel)
+		(= loop (+ 0 (/ (- char1 65) 13)))
+		(= cel (mod (- char1 65) 13))
+		; print string with first letter as icon:
+		;  945 - view# of spritesheet
+		(Print @newmsg &rest #icon 945 loop cel #letter)
+	else
+		; just print string
+		(Print @msg &rest)
+	)
+)
+
+(procedure (ParseSelector selectorStr &tmp startIdx endIdx argLen [argStr 20] newArgsList newArgsCtr newValue useValue char1)
+	; init array
+	(for ((= startIdx 0)) (< startIdx 20) ((++ startIdx))
+		(= [argStr startIdx] 0)
+	)
+
+	(= newArgsList (NewList))
+	(= newArgsCtr 0)
+	(= startIdx 0)
+
+	; loop through each argument in selector string until we hit terminator
+	(repeat
+		; locate arg by finding next space (or terminator) in string
+		(= endIdx (StrChr selectorStr 32 startIdx))
+		(= argLen (- endIdx startIdx))
+
+		; extract argument from selector string (and ensure it's terminated)
+		(StrCpy @argStr (+ selectorStr startIdx) argLen)
+		(StrAt @argStr argLen 0)
+
+		; map to a value based on first character
+		(= char1 (StrAt @argStr 0))
+		(= newValue 0)
+		(= useValue true)
+		(cond
+			; if arg starts with a number or '-', convert string to integer
+			((or (and (>= char1 48) (<= [char1 0] 57)) (== char1 45))
+				(= newValue (ReadNumber @argStr))
+			)
+          	; otherwise, translate string to a selector used in Print function
+           	((== (StrCmp @argStr {#time}) STRINGS_EQUAL)
+           		(= newValue #time)
+			)
+           	((== (StrCmp @argStr {#mode}) STRINGS_EQUAL)
+           		(= newValue #mode)
+			)
+           	((== (StrCmp @argStr {#font}) STRINGS_EQUAL)
+           		(= newValue #font)
+			)
+           	((== (StrCmp @argStr {#window}) STRINGS_EQUAL)
+           		(= newValue #window)
+			)
+           	((== (StrCmp @argStr {#edit}) STRINGS_EQUAL)
+           		(= newValue #edit)
+			)
+           	((== (StrCmp @argStr {#at}) STRINGS_EQUAL)
+           		(= newValue #at)
+			)
+           	((== (StrCmp @argStr {#width}) STRINGS_EQUAL)
+           		(= newValue #width)
+			)
+           	((== (StrCmp @argStr {#title}) STRINGS_EQUAL)
+           		(= newValue #title)
+			)
+           	((== (StrCmp @argStr {#button}) STRINGS_EQUAL)
+           		(= newValue #button)
+			)
+           	((== (StrCmp @argStr {#icon}) STRINGS_EQUAL)
+           		(= newValue #icon)
+			)
+           	((== (StrCmp @argStr {#draw}) STRINGS_EQUAL)
+           		(= newValue #draw)
+			)
+           	((== (StrCmp @argStr {#dispose}) STRINGS_EQUAL)
+           		(= newValue #dispose)
+			)
+           	((== (StrCmp @argStr {#first}) STRINGS_EQUAL)
+           		(= newValue #first)
+			)
+           	((== (StrCmp @argStr {#letter}) STRINGS_EQUAL)
+           		(= newValue #letter)
+			)
+           	((== (StrCmp @argStr {#dontErase}) STRINGS_EQUAL)
+           		; TODO: #dontErase
+           		(= useValue false)
+			)
+			(else
+				(= useValue false)
+			)
+		)
+
+		; if value found, add to args list
+		(if useValue
+			;(Printf "ParseSelector: %s -> arg(%d)=%d" @argStr newArgsCtr newValue)
+			(AddToEnd newArgsList (NewNode newValue newArgsCtr))
+			(++ newArgsCtr)
+		)
+
+		; break out if we hit the end of the string
+		(breakif (== (StrAt selectorStr endIdx) 0))
+
+		; advance startIdx to end of current arg (+1 for space)
+		(= startIdx (+ endIdx 1))
+	)
+	(return newArgsList)
+)
+
+(procedure (StrChr str chr fromIdx &tmp idx len)
+	; get starting position
+	(if (< argc 3)
+		(= fromIdx 0)
+	)
+	(= len (StrLen str))
+
+	; find first occurrance of chr
+	(for ((= idx fromIdx)) (< idx len) ((++ idx))
+		(if (== (StrAt str idx) chr)
+			(return idx)
+		)
+	)
+	(return idx)
+)
 
 (class PrintScript of AudioScript
 	(properties

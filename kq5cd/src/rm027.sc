@@ -13,7 +13,6 @@
 (use Motion)
 (use Actor)
 (use System)
-(use Timer)
 
 (public
 	rm027 0
@@ -464,44 +463,10 @@
 			(0
 			    ; the ants' song
 				(Say 9998 self)
-				(lyricScript init: client)
 			)
 			(1
 			    ; callback on client script when done
 				(client cue:)
-				(self dispose:)
-			)
-		)
-	)
-)
-
-(instance lyricScript of Script
-	(properties)
-	
-	(method (changeState newState)
-		(switch (= state newState)
-			(0
-			    ; wait 4 seconds before starting lyrics
-				(Timer set: self 4)
-			)
-			(1
-				(Print 340 10 #at 20 20 #dispose) ; "We're the ants led by King Antony"
-				(Timer set: self 4)
-			)
-			(2
-				(Print 340 11 #at 20 20 #dispose) ; "We're coming to help King Graham!"
-				(Timer set: self 4)
-			)
-			(3
-				(Print 340 10 #at 20 20 #dispose) ; "We're the ants led by King Antony"
-				(Timer set: self 4)
-			)
-			(4
-				(Print 340 11 #at 20 20 #dispose) ; "We're coming to help King Graham!"
-				(Timer set: self 4)
-			)
-			(5
-				(Print 340 12 #at 20 20 #time 16 #dispose) ; "(Whistling)"
 				(self dispose:)
 			)
 		)

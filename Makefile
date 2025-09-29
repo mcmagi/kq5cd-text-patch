@@ -25,9 +25,8 @@ TEX_FILES=${PATCH_DIR}/300.tex \
 		  ${PATCH_DIR}/391.tex
 
 SCR_FILES=${PATCH_DIR}/0.scr \
-		  ${PATCH_DIR}/9.scr \
-		  ${PATCH_DIR}/27.scr \
 		  ${PATCH_DIR}/255.scr \
+		  ${PATCH_DIR}/300.scr \
 		  ${PATCH_DIR}/604.scr \
 		  ${PATCH_DIR}/928.scr
 

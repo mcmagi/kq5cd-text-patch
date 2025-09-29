@@ -109,6 +109,19 @@
 	                      $5000 915  ; "Yes, you! Don't be such a coward. Now, go on! You'd better get started!"
 	                      $5100 916  ; "Thank you, sir. I appreciate all you've done for me."
 	                      $5200 0]   ; (cls)
+
+	antsLyricCount = 5
+	[antsLyricData 10] = [-240 4010  ; "We're the ants led by King Antony"
+	                      -210 4011  ; "We're coming to help King Graham!"
+	                      -270 4010  ; "We're the ants led by King Antony"
+	                      -210 4011  ; "We're coming to help King Graham!"
+	                      -270 4012] ; (Whistling)
+
+	willowLyricCount = 4
+	[willowLyricData 8] = [-240 4013  ; "How will I find this heart of mine?"
+	                       -300 4014  ; "Taken from me for some time"
+	                       -300 4015  ; "Here I stand near my pool of tears"
+	                       -300 4016] ; "Here I'll stay throughout the years"
 )
 
 
@@ -121,6 +134,14 @@
 
 	(method (run resource &tmp data count)
 		(switch resource
+			; song lyrics
+			(9998
+				(self setScript: (PrintScript new: @antsLyricData antsLyricCount))
+			)
+			(9999
+				(self setScript: (PrintScript new: @willowLyricData willowLyricCount))
+			)
+			; intro sequence
 			(10103
 				(self setScript: (PrintScript new: @a1s3IntroData a1s3IntroCount))
 			)
@@ -151,6 +172,7 @@
 			(10113
 				(self setScript: (PrintScript new: @a2s5IntroData a2s5IntroCount))
 			)
+			; TODO: ending sequence
 		)
 	)
 	

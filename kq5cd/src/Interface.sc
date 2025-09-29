@@ -369,7 +369,7 @@
 	(Print @str)
 )
 
-(procedure (ParseSelector selectorStr &tmp startIdx endIdx argLen [argStr 20] newArgsList newArgsCtr newValue char1)
+(procedure (ParseSelector selectorStr &tmp startIdx endIdx argLen [argStr 20] newArgsList newArgsCtr newValue useValue char1)
 	; init array
 	(for ((= startIdx 0)) (< startIdx 20) ((++ startIdx))
 		(= [argStr startIdx] 0)
@@ -381,8 +381,6 @@
 
 	; loop through each argument in selector string until we hit terminator
 	(repeat
-		(= newValue -1)
-
 		; locate arg by finding next space (or terminator) in string
 		(= endIdx (StrChr selectorStr 32 startIdx))
 		(= argLen (- endIdx startIdx))
@@ -393,6 +391,8 @@
 
 		; map to a value based on first character
 		(= char1 (StrAt @argStr 0))
+		(= newValue 0)
+		(= useValue true)
 		(cond
 			; if arg starts with a number or '-', convert string to integer
 			((or (and (>= char1 48) (<= [char1 0] 57)) (== char1 45))
@@ -443,11 +443,15 @@
 			)
            	((== (StrCmp @argStr {#dontErase}) STRINGS_EQUAL)
            		; TODO: #dontErase
+           		(= useValue false)
+			)
+			(else
+				(= useValue false)
 			)
 		)
 
 		; if value found, add to args list
-		(if (>= newValue 0)
+		(if useValue
 			;(Printf "ParseSelector: %s -> arg(%d)=%d" @argStr newArgsCtr newValue)
 			(AddToEnd newArgsList (NewNode newValue newArgsCtr))
 			(++ newArgsCtr)

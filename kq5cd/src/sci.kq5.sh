@@ -58,7 +58,7 @@
 (define rsCURSOR $88)
 (define rsPATCH  $89)
 
-#ifdef SCI_1_1
+//#ifdef SCI_1_1 - used for KQ5
 (define rsBITMAP $8a)
 (define rsPALETTE $8b)
 (define rsCDAUDIO $8c)
@@ -69,7 +69,7 @@
 (define rsHEAP   $91)
 (define rsAUDIO36 $92)
 (define rsSYNC36 $93)
-#endif
+//#endif
 
 /*************************************************************************
  * SCREENS

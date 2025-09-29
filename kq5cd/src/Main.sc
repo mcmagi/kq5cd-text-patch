@@ -21,6 +21,7 @@
 (use User)
 (use Actor)
 (use System)
+(use TextMod)
 
 (public
 	KQ5 0
@@ -47,6 +48,7 @@
 	Say 29
 	SayWithIcon 30
 	DoAudioWithText 31
+	PrintForAudio 32
 )
 
 (local
@@ -772,7 +774,6 @@
 		(switch
 			(PrintForAudio
 				global330
-				false ; don't print letter icon
 				#width
 				220
 				#icon
@@ -863,33 +864,13 @@
 	(DoAudioWithText resource #icon view loop cel &rest)
 )
 
-(procedure (DoAudioWithText resource &tmp time result narrator hasIconParam)
+(procedure (DoAudioWithText resource &tmp time result)
 	; play audio
 	(= time (DoAudio audPLAY resource))
 
 	(if (> time 0)
-		; narrator at 0-858 or 9050-9076
-		(= narrator	
-			(or
-				(<= resource 858)
-				(and (>= resource 9050) (< resource 9100))
-			)
-		)
-	
-		; do we already have an icon parameter argument?
-		(= hasIconParam
-			(and (> argc 1) (== [resource 1] #icon))
-		)
-	
-		(= result
-			(PrintForAudio
-				resource
-				; show letter icon if narrator and we don't already have an icon
-				(and narrator (not hasIconParam))
-				&rest
-			)
-		)
-	
+		(= result (PrintForAudio resource &rest))
+
 		; if we printed a dialog, then stop audio when print window closes
 		; ... unless we printed a modeless dialog
 		(if (and (!= result -1) (!= result gModelessDialog))
@@ -900,7 +881,7 @@
 	(return time)
 )
 
-(procedure (PrintForAudio resource withLetterIcon &tmp module entry [msg 400] [selector 50] result)
+(procedure (PrintForAudio resource &tmp module entry [msg 400] [selector 50] narrator hasIconParam withLetterIcon result)
 	(= result -1)
 	(= [msg 0] 0)
 	(= [selector 0] 0)
@@ -910,8 +891,9 @@
 	; map resource number to module/entry (and flag narrator)
 	(cond
 		((>= resource 9990)
-			; 9996-9999 -> no mapping (musical interludes)
-			; 10101-10126 -> no mapping (intro/outro with music)
+			; 9996-9999 -> run print script for lyrics
+			; 10101-10126 -> run print script for intro/outro
+			(PrintScript run: resource)
 		)
 		((>= resource 9000)
 			; 9000-9254 -> module 390: 0-254
@@ -956,6 +938,22 @@
 	(if (> module 0)
 		(GetFarText module entry @msg)
 		(if (> (StrLen @msg) 0)
+			; narrator at 0-858 or 9050-9076
+			(= narrator
+				(or
+					(<= resource 858)
+					(and (>= resource 9050) (< resource 9100))
+				)
+			)
+
+			; do we already have an icon parameter argument?
+			(= hasIconParam
+				(and (> argc 1) (== [resource 1] #icon))
+			)
+
+			; add decorative letter icon if narrator and we don't already have an icon
+			(= withLetterIcon (and narrator (not hasIconParam)))
+
 			; lookup selector string if we didn't pass any selectors
 			(if (<= argc 2)
 				(GetFarText (+ module 1) entry @selector)
@@ -1831,7 +1829,7 @@
 		(super play: param1)
 
 		(if (not stopped)
-			(PrintForAudio number false)
+			(PrintForAudio number)
 		)
 	)
 )

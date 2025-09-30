@@ -30,6 +30,9 @@ SCR_FILES=${PATCH_DIR}/0.scr \
 		  ${PATCH_DIR}/604.scr \
 		  ${PATCH_DIR}/928.scr
 
+clean:
+	rm -rf ${BUILD_DIR}
+
 all: text script ${ZIP_FILE}
 
 install:

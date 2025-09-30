@@ -201,17 +201,17 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5199			0	
 5200	120 5	#at 120 160 #dispose	8	Crispin!
 5201	120 6	#at 40 70 #dispose	49	I have the solution to ALL your problems, Graham!
-5202	121 0	#at 10 135 #width 291 #dispose	205	While you and Cedric were gone, I did some asking around, and found out that YOUR son, Alexander, had the dubious distinction, if you may, of turning Mordack's brother, Mannanan, into a cat some time back.
-5203	121 1	#at 10 145 #width 291 #dispose	153	Obviously, this deed angered Mordack who could do nothing about it since this particular spell could only be undone by the actual perpetrator...your son.
-5204	121 2	#at 10 135 #width 291 #dispose	173	It doesn't take a great genius to figure out that Mordack took your family and castle in revenge and to try to `persuade' Alexander to restore Mannanan back to his old self.
-5205	121 3	#at 10 135 #width 291 #dispose	203	I DID discover, as now I see, that your castle and family were miniaturized and imprisoned inside a glass bottle. I did some research and found the spell for turning everything back to normal. Now watch!
+5202	121 0	#at 10 135 #width 285 #dispose	207	While you and Cedric were gone, I did some asking around, and I found out that YOUR son, Alexander, had the dubious distinction, if you may, of turning Mordack's brother, Mannanan, into a cat some time back.
+5203	121 1	#at 10 145 #width 285 #dispose	153	Obviously, this deed angered Mordack who could do nothing about it since this particular spell could only be undone by the actual perpetrator...your son.
+5204	121 2	#at 10 135 #width 285 #dispose	169	It doesn't take a great genius to figure out that Mordack took your family and castle in revenge to try to `persuade' Alexander to restore Mannanan back to his old self.
+5205	121 3	#at 10 135 #width 285 #dispose	203	I DID discover, as now I see, that your castle and family were miniaturized and imprisoned inside a glass bottle. I did some research and found the spell for turning everything back to normal. Now watch!
 5206	120 7	#at 40 70 #dispose	22	Hocus, pocus, ALIOCUS!
 5207	120 8	#at 120 150 #dispose	46	Valanice! My children! My joy knows no limits!
 5208	120 9	#at 40 50 #dispose	36	Oh, Father! I'm so glad you're here!
 5209	120 10	#at 10 40 #dispose	62	Oh...Princess Cassima! How could I forget you! Come over here.
 5210	122 0	#at 9 119 #width 285 #dispose	308	Let me introduce you to my family. This is my wife, Queen Valanice; my daughter, Princess Rosella; and my son, Prince Alexander...who started this whole mess! All of you, this is Princess Cassima from the Land of the Green Isles. Without her, none of us would be standing here now. She bravely saved my life!
 5211	122 1	#at 8 146 #width 285 #dispose	147	My Lady. I am deeply in your debt and I will make it up to you. With your permission, I'd like to travel to the Land of the Green Isles to see you.
-5212	120 11	#at 120 140 #dispose	90	All right! Now that we're done with the formalities, let's get on with business, shall we?
+5212	120 11	#at 120 140 #dispose	94	All right! Now that we've done with all the formalities, let's get on with business, shall we?
 5213	120 12	#at 110 160 #dispose	26	Higgledy, piggledly, POOH!
 5214	120 13	#at 110 120 #dispose	166	Be assured that your castle is right back where it belongs...and the right size too! But NOW, it's time that everyone return to their homes...with MY help, of course.
 5215	120 14	#at 110 160 #dispose	28	Alakazam, alakazoo, ALAKA...
@@ -226,7 +226,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5224			0	
 5225	120 23	#at 110 160 #dispose	41	Cedric, it sure is good to see YOU again!
 5226	120 24	#at 180 80 #dispose	19	Likewise, I'm sure.
-5227	120 25	#at 110 150 #dispos	50	All right. Enough is enough. Let's get on with it.
+5227	120 25	#at 110 150 #dispose	50	All right. Enough is enough. Let's get on with it.
 5228	120 26	#at 110 140 #dispose	82	Okay, Cassima. Let's send you home first. Wasn't that the Land of the Green Isles?
 5229			0	
 5230	120 28	#at 120 10 #dispose	32	You can be sure of that, m'lady.

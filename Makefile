@@ -1,6 +1,6 @@
 INSTALL_DIR=D:/games/Sierra/KQ5CD
 PY=python
-VERSION=0.0.3-alpha
+VERSION=0.0.3
 
 GAME_DIR=kq5cd
 BUILD_DIR=build

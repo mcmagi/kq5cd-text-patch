@@ -43,12 +43,10 @@ What works:
 
 * Text dialogs for the narrator, including the decorative first letter
 * Text dialogs for actor portraits, with the dialog box positioned relative to the portrait
-* Text dialog behavior (positioning, width, timeout, imagery, etc) used in the Disk version
+* Text dialog behavior (positioning, width, timeout, imagery, etc) used in the Disk version, with some adjustment where necessary
 * Restore/Restart/Quit text dialogs shown at death have the text re-added to them
-
-Still TODO:
-* Intro
-* Outro
+* Text dialogs for the intro and ending sequences
+* Text dialogs for the Ants and Weeping Willow songs' lyrics
 
 ## Installation ##
 
@@ -67,16 +65,14 @@ Copy the game files to the `kq5cd` directory.
 Compile the following files:
 * Main.sc
 * Interface.sc
+* TextMod.sc
 * Talker.sc
-* rm009.sc
-* rm027.sc
 * deathScript1.sc
 
 Then export them to the `kq5cd/src` directory
 * Main.sc -> 0.scr
-* rm009.sc -> 9.scr
-* rm027.sc -> 27.scr
 * Interface.sc -> 255.scr
+* TextMod.sc -> 300.scr
 * deathScript1.sc -> 604.scr
 * Talker.sc -> 928.scr
 

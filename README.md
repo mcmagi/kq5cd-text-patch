@@ -8,7 +8,7 @@ While the original 1990 Floppy Disk release of King's Quest V had text boxes, th
 
 This patch re-adds the text dialog functionality to the game scripts, using the text content from the Disk version as a reference. However, since the voice dialog from the CD is not exactly 1-to-1 with the Disk version, the text content in the patch has also been updated to match the voiceovers.
 
-## Status ##
+## Features ##
 
 The game is now fully subtitled, with support for the following:
 
@@ -21,9 +21,11 @@ The game is now fully subtitled, with support for the following:
 
 ## Installation ##
 
-Unpack the zip file into your game directory and run the game. The file `0.SCR` will be overwritten, so you may want to back it up first.
+* Unpack the zip file into your game directory.
+  * The file `0.SCR` will be overwritten, so you may want to back it up first.
+* Launch the game in either DOS or ScummVM.
 
-It works with both DOS and ScummVM. However, existing saved games will not be backward compatible.
+Note that existing saved games will not be backward compatible.
 
 ## Screenshots ##
 
@@ -54,22 +56,35 @@ It works with both DOS and ScummVM. However, existing saved games will not be ba
   </tr>
 </table>
 
+## More Information ##
+
+If you have any interest in how I made this patch, feel free to watch my [YouTube series](https://www.youtube.com/playlist?list=PLnztmu4-lcrJ7UPuXMpiMfl0AOAU0wTFp) where I walk through modding the game.
+
+## Credits ##
+
+Thanks to sluicebox for providing decompiled [sci-scripts](https://github.com/sluicebox/sci-scripts/tree/main).
+
+And thanks also to the authors of magnificent [SCI Companion](https://scicompanion.com/), including the [Kawa-oneechan fork](https://github.com/Kawa-oneechan/SCICompanion).
+
+And lastly, thanks to the authors of [SCI Viewer](https://sciprogramming.com/scitools.php?id=2).
+
+This patch would not have been possible without these tools.
+
+## Disclaimer ###
+
+King's Quest is a registered trademark of Activision Publishing. This project is not affiliated with nor endorsed by Activision. You must own a legal copy of King's Quest V in order to apply this patch.
+
 ## Building ##
 
-You'll need to use [SCI Companion](https://github.com/Kawa-oneechan/SCICompanion/tree/master) to build and export the script files.
+You'll need to use [SCI Companion](https://scicompanion.com/) to build and export the script files.
 
 ### Script Files ###
 
 Copy the game files to the `kq5cd` directory.
 
-Compile the following files:
-* Main.sc
-* Interface.sc
-* TextMod.sc
-* Talker.sc
-* deathScript1.sc
+In SCI Companion, load the game from the `kq5cd` directory and compile all game scripts.
 
-Then export them to the `kq5cd/src` directory
+Then export the following scripts to the `kq5cd/src` directory
 * Main.sc -> 0.scr
 * Interface.sc -> 255.scr
 * TextMod.sc -> 300.scr

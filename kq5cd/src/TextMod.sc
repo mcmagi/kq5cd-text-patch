@@ -454,10 +454,6 @@
            	((== (StrCmp @argStr {#letter}) STRINGS_EQUAL)
            		(= newValue #letter)
 			)
-           	((== (StrCmp @argStr {#dontErase}) STRINGS_EQUAL)
-           		; TODO: #dontErase
-           		(= useValue false)
-			)
 			(else
 				(= useValue false)
 			)

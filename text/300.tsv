@@ -860,14 +860,14 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 858	200 16		111	Mumbling and muttering to herself, the ugly old hag refuses to indulge in any further conversation with Graham.			
 859	102 0	#at 100 100 #dispose	29	My castle! What has happened?			
 860	102 1	#at 10 10 #dispose	29	I can tell you what happened.			
-861	102 2	#at 100 100 #dontErase #dispose	6	What?!			
+861	102 2	#at 100 100 #dispose	6	What?!			
 862	103 0	#at 10 10 #dispose	62	I know what happened to your castle. I saw it all. Yes, I did.			
-863	103 1	#at 80 20 #dontErase #dispose	38	You did?! Well, then...what happened?!			
+863	103 1	#at 80 20 #dispose	38	You did?! Well, then...what happened?!			
 864	104 0	#at 140 100 #width 150 #dispose	185	It was the powerful and evil wizard Mordack who did it. I just happened to be visiting with an old friend when I saw him materialize out of thin air. Thank goodness he didn't notice ME!			
-865	104 1	#at 10 30 #dontErase #dispose	22	Don't stop now! Go on!			
-866	105 0	#at 10 110 #dontErase #dispose	232	He conjured up a terrible whirlwind that swirled faster and faster around the castle. With another incantation Mordack then caused the wind to draw the castle up into the sky and out of sight. Oh, it was something to see, all right!			
+865	104 1	#at 10 30 #dispose	22	Don't stop now! Go on!			
+866	105 0	#at 10 110 #dispose	232	He conjured up a terrible whirlwind that swirled faster and faster around the castle. With another incantation Mordack then caused the wind to draw the castle up into the sky and out of sight. Oh, it was something to see, all right!			
 867	103 2	#at 10 130 #dispose	99	Why? Why would this wizard...Mordack...want my castle? What could he have against me and my family?			
-868	103 3	#at 10 10 #dontErase #dispose	90	That I don't know. I only know that it was Mordack who took your castle...and your family.			
+868	103 3	#at 10 10 #dispose	90	That I don't know. I only know that it was Mordack who took your castle...and your family.			
 869	104 2	#at 140 100 #width 150 #dispose	164	Well, perhaps I can help you. My employer also happens to be a wizard, which is why I recognized Mordack. Unlike Mordack, though, my employer is a very good wizard.			
 870	104 3	#at 140 100 #width 150 #dispose	98	His name is Crispinophur...but we all call him Crispin for short. The only problem is, you see...,			
 871	104 4	#at 140 10 #dispose	11	Wh-Whoa...!			
@@ -881,11 +881,11 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 879	104 12	#at 140 100 #width 150 #dispose	119	Excuse me for saying, Your Majesty...but you don't have a choice. You MUST come with me. I'm sure Crispin can help you!			
 880	104 13	#at 129 51 #dispose	19	What is that stuff?			
 881	104 14	#at 140 10 #width 150 #dispose	89	Oh, just some old, left-over fairy dust I've been carrying around. It'll help you to fly.			
-882	104 15	#at 170 10 #dontErase 150 #width 100 #dispose	142	You can follow me to the land of Serenia, where Crispin and I live. It's MUCH too far to walk, you know. I think the fairy dust is still good.			
+882	104 15	#at 170 10 150 #width 100 #dispose	142	You can follow me to the land of Serenia, where Crispin and I live. It's MUCH too far to walk, you know. I think the fairy dust is still good.			
 883	100 1	#at 10 10 #dispose	17	Come on! Up here!			
 884	100 2	#at 10 10 #dispose	18	Follow meeeeee...!			
 885	107 1	#at 10 10 #dispose	32	There it is! Down here! Come on!			
-886	107 0	#at 100 10 #dontErase #dispose	19	Okay...here I come!			
+886	107 0	#at 100 10 #dispose	19	Okay...here I come!			
 887	108 0	#at 10 10 #dispose	40	Looks like the fairy dust just wore off.			
 888	108 1	#at 100 10 #dispose	55	Cedric! Where have you been? I've been calling for you!			
 889	108 2	#at 100 10 #dispose	30	Well, well, what have we here?			

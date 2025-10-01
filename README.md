@@ -8,6 +8,23 @@ While the original 1990 Floppy Disk release of King's Quest V had text boxes, th
 
 This patch re-adds the text dialog functionality to the game scripts, using the text content from the Disk version as a reference. However, since the voice dialog from the CD is not exactly 1-to-1 with the Disk version, the text content in the patch has also been updated to match the voiceovers.
 
+## Status ##
+
+The game is now fully subtitled, with support for the following:
+
+* Text dialogs for the narrator, including the decorative first letter
+* Text dialogs for actor portraits, with the dialog box positioned relative to the portrait
+* Text dialog behavior (positioning, width, timeout, imagery, etc) used in the Disk version, with some adjustment where necessary
+* Restore/Restart/Quit text dialogs shown at death have the text re-added to them
+* Text dialogs for the intro and ending sequences
+* Text dialogs for the Ants and Weeping Willow songs' lyrics
+
+## Installation ##
+
+Unpack the zip file into your game directory and run the game. The file `0.SCR` will be overwritten, so you may want to back it up first.
+
+It works with both DOS and ScummVM. However, existing saved games will not be backward compatible.
+
 ## Screenshots ##
 
 <table style="border: none">
@@ -37,28 +54,9 @@ This patch re-adds the text dialog functionality to the game scripts, using the 
   </tr>
 </table>
 
-## Status ##
-
-What works:
-
-* Text dialogs for the narrator, including the decorative first letter
-* Text dialogs for actor portraits, with the dialog box positioned relative to the portrait
-* Text dialog behavior (positioning, width, timeout, imagery, etc) used in the Disk version
-* Restore/Restart/Quit text dialogs shown at death have the text re-added to them
-
-Still TODO:
-* Intro
-* Outro
-
-## Installation ##
-
-Unpack the zip file into your game directory and run the game. The file `0.SCR` will be overwritten, so you may want to back it up first.
-
-It works with both DOS and ScummVM. However, existing saved games will not be backward compatible.
-
 ## Building ##
 
-You'll need to use SCI Companion to build and export the script files.
+You'll need to use [SCI Companion](https://github.com/Kawa-oneechan/SCICompanion/tree/master) to build and export the script files.
 
 ### Script Files ###
 
@@ -67,16 +65,14 @@ Copy the game files to the `kq5cd` directory.
 Compile the following files:
 * Main.sc
 * Interface.sc
+* TextMod.sc
 * Talker.sc
-* rm009.sc
-* rm027.sc
 * deathScript1.sc
 
 Then export them to the `kq5cd/src` directory
 * Main.sc -> 0.scr
-* rm009.sc -> 9.scr
-* rm027.sc -> 27.scr
 * Interface.sc -> 255.scr
+* TextMod.sc -> 300.scr
 * deathScript1.sc -> 604.scr
 * Talker.sc -> 928.scr
 

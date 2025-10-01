@@ -819,16 +819,16 @@
 	(cond
 		((and (== argc 2) (not (== argc 3)))
 			; 2 argments = start audio and return timer
-			(SpeakTimer theVol: volume set60ths: caller (DoAudioWithText resource))
+			(SpeakTimer theVol: volume set60ths: caller (SayWithText resource))
 		)
 		((== argc 3)
 			; 3 arguments = start audio and return ticks
-			(DoAudioWithText resource)
+			(SayWithText resource)
 		)
 		(else
 			; 1 argument = start audio and block until audio finishes or is interrupted by an event
 			(= cursor (gGame setCursor: speakCursor))
-			(= audioTime (+ (DoAudioWithText resource) 2 (GetTime)))
+			(= audioTime (+ (SayWithText resource) 2 (GetTime)))
 			(while
 				(and
 					(or
@@ -859,7 +859,7 @@
 )
 
 (procedure (SayWithIcon resource view loop cel)
-	(DoAudioWithText resource #icon view loop cel &rest)
+	(SayWithText resource #icon view loop cel &rest)
 )
 
 (procedure (SetScore param1)

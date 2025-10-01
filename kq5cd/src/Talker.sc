@@ -223,7 +223,7 @@
 		(Print @temp0 #at x y #dispose)
 	)
 
-	(method (startAudio theKeys &tmp temp0 [temp1 10] textX textY textW)
+	(method (startAudio theKeys &tmp temp0 [temp1 10])
 		(= temp0 theKeys)
 
 		(DoAudio audWPLAY temp0)
@@ -231,19 +231,7 @@
 			(mouth setCycle: MouthSync temp0)
 		)
 
-		; calculate position of text box based on position of talker
-		(= textY (+ nsTop 10)) ; always align top of text box with talker (10 top padding)
-		(if (< nsLeft 119) ; screen is 320 pixels, talker is 82; midpoint (320-82)/2 = 119
-			; adjust text box to right of talker
-			(= textX (+ nsLeft 102))	; x = talker left position + talker (82) + 10 left margin + 10 left padding
-			(= textW (- 290 textX))		; width = 320 screen - text X - 10 right margin + 20 right padding
-		else
-			; adjust text box to left of talker
-			(= textX 20)				; x = 10 left margin + 10 left padding
-			(= textW (- nsLeft 50))		; width = talker left position - 30 padding - 20 margin
-		)
-
-		(= ticks (DoAudioWithText temp0 #at textX textY #width textW #dispose))
+		(= ticks (TalkerWithText temp0 nsLeft nsTop))
 
 		(if eyes
 			(eyes setCycle: RTRandCycle ticks)

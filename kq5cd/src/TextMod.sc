@@ -8,9 +8,10 @@
 (use Timer)
 
 (public
-	DoAudioWithText 0
+	SayWithText 0
 	PrintForAudio 1
 	ParseSelector 2
+	TalkerWithText 3
 )
 
 (local
@@ -210,12 +211,28 @@
     s6EndingCount    = 4
 	[s6EndingData 8] = [$3a00 5236  ; "Well, there she is...our happy home. And we're all safe and sound once more."
                          -420 5237  ; "Let's go home, shall we?"
-					     -120 5238  ; "Yes, let's."
+					     -135 5238  ; "Yes, let's."
 					     -120    0] ; (cls)
 )
 
 
-(procedure (DoAudioWithText resource &tmp time result)
+(procedure (TalkerWithText resource talkerX talkerY &tmp textX textY textW)
+	; calculate position of text box based on position of talker
+	(= textY (+ talkerY 10)) ; always align top of text box with talker (10 top padding)
+	(if (< talkerX 119) ; screen is 320 pixels, talker is 82; midpoint (320-82)/2 = 119
+		; adjust text box to right of talker
+		(= textX (+ talkerX 102))	; x = talker left position + talker (82) + 10 left margin + 10 left padding
+		(= textW (- 290 textX))		; width = 320 screen - text X - 10 right margin + 20 right padding
+	else
+		; adjust text box to left of talker
+		(= textX 20)				; x = 10 left margin + 10 left padding
+		(= textW (- talkerX 50))		; width = talker left position - 30 padding - 20 margin
+	)
+
+	(SayWithText resource #at textX textY #width textW #dispose)
+)
+
+(procedure (SayWithText resource &tmp time result)
 	; play audio
 	(= time (DoAudio audPLAY resource))
 
@@ -600,36 +617,3 @@
 	)
 )
 
-
-(class SayTimer of Script
-	(properties
-		seconds 0
-		ticks 0
-		resource 0
-		audio false
-	)
-
-	(method (init)
-		(= start 0)
-		(super init: self)
-	)
-
-	(method (changeState newState)
-		(switch (= state newState)
-			(0
-				(if (> seconds 0)
-					(Timer set: self seconds)
-				else
-					(Timer set60ths: self ticks)
-				)
-			)
-			(1
-				(if audio
-					(Say resource)
-				else
-					(PrintForAudio resource)
-				)
-			)
-		)
-	)
-)

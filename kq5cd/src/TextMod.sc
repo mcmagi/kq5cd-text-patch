@@ -249,7 +249,7 @@
 	(return time)
 )
 
-(procedure (PrintForAudio resource &tmp module entry [msg 400] [selector 50] narrator hasIconParam withLetterIcon result)
+(procedure (PrintForAudio resource &tmp module entry [msg 400] [selector 50] narrator hasPrintArgs withLetterIcon result)
 	(= result -1)
 	(= [msg 0] 0)
 	(= [selector 0] 0)
@@ -314,16 +314,14 @@
 				)
 			)
 
-			; do we already have an icon parameter argument?
-			(= hasIconParam
-				(and (> argc 1) (== [resource 1] #icon))
-			)
+			; check if there are selector arguments to pass to Print
+			(= hasPrintArgs (> argc 1))
 
-			; add decorative letter icon if narrator and we don't already have an icon
-			(= withLetterIcon (and narrator (not hasIconParam)))
+			; add decorative letter icon if narrator and we don't already have print arguments
+			(= withLetterIcon (and narrator (not hasPrintArgs)))
 
 			; lookup selector string if we didn't pass any selectors
-			(if (<= argc 2)
+			(if (not hasPrintArgs)
 				(GetFarText (+ module 1) entry @selector)
 			)
 

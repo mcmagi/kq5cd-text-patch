@@ -206,7 +206,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 204	4 20		45	Graham could never carry around a big barrel.			
 205	4 12		52	The cart is too heavy for Graham to move by himself.			
 206			0				
-207	6 2	#at 10 10 #dispose	81	Suddenly, frantic squeakings alert Graham to a mangy cat chasing a terrified rat.			
+207	6 2	#at 10 10	81	Suddenly, frantic squeakings alert Graham to a mangy cat chasing a terrified rat.			
 208	6 4	#at 10 10	52	The cold river courses swiftly by the town bakehouse			
 209	6 5	#at 10 10	67	A rutted, dirt road travels east and west beside the rushing river.			
 210	6 6	#at 10 10	49	Thick, multipaned windows surround the bakehouse.			
@@ -893,7 +893,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 891	108 4	#at 100 10 #dispose	68	Cedric, go into the house and pour each of us a nice hot cup of tea.			
 892	108 5	#at 10 20 #dispose	18	Aye, aye, Crispin.			
 893	109 0	#at 10 10 #width 270 #dispose	182	...The Society of Wizards has always taken a dim view of Mordack and his abuse of his power. Why, he's even been put on suspension a few times. It never seems to do any good, though.			
-894	109 1	#at 100 140 #dispose	88	Crispin, why would Mordack want to take my family or castle? What did WE ever do to him?
+894	109 1	#at 100 140 #dispose	88	Crispin, why would Mordack want to take my family or castle? What did WE ever do to him?			
 895	109 2	#at 10 10 #dispose	128	I'm afraid I don't know the answer to that. Mordack is a very unpredictable wizard. I've NEVER understood that evil mind of his.			
 896	109 3	#at 10 120 #dispose	85	I thought perhaps you could help His Majesty, Crispin. That's why I brought him here.			
 897	109 4	#at 10 10 #dispose	23	Well, let me see now...			
@@ -1030,7 +1030,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 1028	205 5	#at 160 10 #time 4	13	Okay, thanks.			
 1029	205 6	#at 10 10 #time 7	78	What have we here? Mama, take those shoes from the young man. Let me see them.			
 1030	205 7	#at 10 10 #time 7	95	These are the finest pair of shoes I've ever seen. The leather is soft and pliable, yet sturdy.			
-1031	205 8	#at 10 10 #time 8	135	The craftmanship of these shoes are superb. And, Mama, look at the solid gold buckle! Why, I could retire with the sale of these shoes!			
+1031	205 8	#at 10 10 #time 8	135	The craftmanship of these shoes are superb. And, Mama, look at the solid gold buckle! Why, I could retire from the sale of these shoes!			
 1032	205 9	#at 10 10 #time 7	75	Then the shoes are yours. I don't think I could find a better use for them.			
 1033	205 10	#at 10 10 #time 7	55	You're a godsend, young man! How can we ever repay you?			
 1034	205 11	#at 10 10 #time 7	71	You don't need to repay me. Just knowing I helped you is enough for me.			

@@ -44,7 +44,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5042	204 4	#at 90 10 #dispose	34	Is Katrina behaving herself, Papa?
 5043	204 5	#at 90 10 #dispose	30	Papa, wo is the puppet string?
 5044	204 6	#at 90 10 #dispose	87	Papa, don't forget Mr. Richards is coming by tomorrow to pick up the wagon for his son.
-5045	204 14	#at 90 10 #dispose	11	Okay, Papa,
+5045	204 14	#at 90 10 #dispose	11	Okay, Papa.
 5046	204 15	#at 90 10 #dispose	13	I'll do that.
 5047	204 16	#at 90 10 #dispose	45	Okay, but let me know if she's bothering you.
 5048	204 17	#at 90 10 #dispose	5	Okay.
@@ -86,7 +86,7 @@ Audio Resource	Text Resource	Print Arguments	Length	Text (transcribed from audio
 5084	24 4	67 8 105 25 7	46	Why should I do that? What will you do for me?
 5085	24 5	67 150 101 25 7	59	I'll show you the way out of the forest...if you let me go!
 5086	24 6	67 8 114 25 6	30	How do I know I can trust you?
-5087	24 7	67 144 101 25 7	48	I give you my word. An elf NEVER breaks his word
+5087	24 7	67 144 101 25 7	49	I give you my word. An elf NEVER breaks his word!
 5088	24 8	67 8 105 25 6	52	Well...it's against my better judgement, but...okay.
 5089	24 9	#at 110 140 #dispose	36	Move over, Rocky. You're in our way!
 5090	24 10	#at 30 30 #dispose	11	Uh...sorry.

@@ -79,19 +79,19 @@
 	                      $4504   0] ; (cls)
 
 	; cdIntro9 -> a2s[345]Script (10112)
-	a2s34IntroCount     = 10
-	[a2s34IntroData 16] = [$4800 887  ; "Looks like the fairy dust just wore off."
-	                       $5100 888  ; "Cedric! Where have you been? I've been calling for you!"
-	                       $5300 889  ; "Well, well, what have we here?"
-	                       $5504 890  ; "A bit clumsy, are you? Well, come on in the house and dry off. No sense sitting around like a wet dog."
-	                       $5604   0  ; (cls)
-	                       $5800 891  ; "Cedric, go on in the house and pour each of us a nice hot cup of tea."
-	                       $5900 892  ; "Aye, aye, Crispin."
-	                       $6050   0] ; (cls)
+	a2s345IntroCount     = 10
+	[a2s345IntroData 16] = [$4800 887  ; "Looks like the fairy dust just wore off."
+	                        $5100 888  ; "Cedric! Where have you been? I've been calling for you!"
+	                        $5300 889  ; "Well, well, what have we here?"
+	                        $5504 890  ; "A bit clumsy, are you? Well, come on in the house and dry off. No sense sitting around like a wet dog."
+	                        $5604   0  ; (cls)
+	                        $5800 891  ; "Cedric, go on in the house and pour each of us a nice hot cup of tea."
+	                        $5900 892  ; "Aye, aye, Crispin."
+	                        $6050   0] ; (cls)
 
 	; cdIntro10 -> a2s5Script (10113)
-	a2s5IntroCount     = 28
-	[a2s5IntroData 56] = [$1100 893  ; "...The Society of Wizards has always taken a dim view of Mordack and his abuse of his power. Why, he's even been put on suspension a few times. It never seems to do any good, though."
+	a2s6IntroCount     = 28
+	[a2s6IntroData 56] = [$1100 893  ; "...The Society of Wizards has always taken a dim view of Mordack and his abuse of his power. Why, he's even been put on suspension a few times. It never seems to do any good, though."
 	                      $1302 894  ; "Crispin, why would Mordack want to take my family or castle? What did WE ever do to him?"
 	                      $1600 895  ; "I'm afraid I don't know the answer to that. Mordack is a very unpredictable wizard. I've NEVER understood that evil mind of his."
 	                      $1800 896  ; "I thought perhaps you could help His Majesty, Crispin. That's why I brought him here."
@@ -531,10 +531,10 @@
 				(self setScript: (PrintScript new: @a2s2IntroData a2s2IntroCount))
 			)
 			(10112
-				(self setScript: (PrintScript new: @a2s34IntroData a2s34IntroCount))
+				(self setScript: (PrintScript new: @a2s345IntroData a2s345IntroCount))
 			)
 			(10113
-				(self setScript: (PrintScript new: @a2s5IntroData a2s5IntroCount))
+				(self setScript: (PrintScript new: @a2s6IntroData a2s6IntroCount))
 			)
 			; ending sequence
 			(10121

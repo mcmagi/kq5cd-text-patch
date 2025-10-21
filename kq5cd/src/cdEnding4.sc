@@ -102,17 +102,14 @@
 				(egoHead setCycle: End self)
 			)
 			(8
-				(cls)
 				(= waitForCue 15360)
 			)
 			(9
-				(cls)
 				(egoHead setCycle: Beg)
 				(valHead setLoop: 11 setCycle: RandCycle cycleSpeed: 4)
 				(= waitForCue 15616)
 			)
 			(10
-				(cls)
 				(egoHead dispose:)
 				(valHead dispose:)
 				(family

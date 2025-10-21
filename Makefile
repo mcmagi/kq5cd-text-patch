@@ -28,6 +28,7 @@ SCR_FILES=${PATCH_DIR}/0.scr \
 		  ${PATCH_DIR}/255.scr \
 		  ${PATCH_DIR}/300.scr \
 		  ${PATCH_DIR}/604.scr \
+		  ${PATCH_DIR}/673.scr \
 		  ${PATCH_DIR}/928.scr
 
 clean:

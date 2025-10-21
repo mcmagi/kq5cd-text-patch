@@ -89,6 +89,7 @@ Then export the following scripts to the `kq5cd/src` directory
 * Interface.sc -> 255.scr
 * TextMod.sc -> 300.scr
 * deathScript1.sc -> 604.scr
+* cdEnding4.sc -> 673.scr
 * Talker.sc -> 928.scr
 
 ### Building the Package ###

@@ -6,10 +6,12 @@ GAME_DIR=kq5cd
 BUILD_DIR=build
 PATCH_DIR=${BUILD_DIR}/patch
 TEXT_DIR=text
+DOC_DIR=doc
 SRC_DIR=${GAME_DIR}/src
 TSV_2_TEX=${PY} tsv2tex.py
 
 ZIP_FILE=${BUILD_DIR}/kq5cd-text-patch-${VERSION}.zip
+README_FILE=${DOC_DIR}/README-text-patch.txt
 
 TEX_FILES=${PATCH_DIR}/300.tex \
 		  ${PATCH_DIR}/301.tex \
@@ -31,13 +33,13 @@ SCR_FILES=${PATCH_DIR}/0.scr \
 		  ${PATCH_DIR}/673.scr \
 		  ${PATCH_DIR}/928.scr
 
-clean:
-	rm -rf ${BUILD_DIR}
-
 all: text script ${ZIP_FILE}
 
 install:
 	cp ${TEX_FILES} ${GAME_DIR}
+
+clean:
+	rm -rf ${BUILD_DIR}
 
 import:
 	cp ${INSTALL_DIR}/*.DRV ${INSTALL_DIR}/*.TEX ${INSTALL_DIR}/*.SCR ${INSTALL_DIR}/*.SYN ${INSTALL_DIR}/*.SND \
@@ -54,6 +56,7 @@ script: ${SCR_FILES}
 ${PATCH_DIR}/%.scr: ${SRC_DIR}/%.scr
 	cp $< $@
 
-${ZIP_FILE}: ${TEX_FILES} ${SCR_FILES}
-	cd ${PATCH_DIR} && zip ../../${ZIP_FILE} *.scr *.tex
+${ZIP_FILE}: ${TEX_FILES} ${SCR_FILES} ${README_FILE}
+	cp ${README_FILE} ${PATCH_DIR}
+	cd ${PATCH_DIR} && zip ../../${ZIP_FILE} *.scr *.tex *.txt
 

@@ -27,7 +27,9 @@ The game is now fully subtitled, with support for the following:
 
 Note that existing saved games will not be backward compatible.
 
-## Screenshots ##
+## Media ##
+
+### Screenshots ###
 
 <table style="border: none">
   <tr>
@@ -55,6 +57,10 @@ Note that existing saved games will not be backward compatible.
     </td>
   </tr>
 </table>
+
+### Video ###
+
+[![King's Quest V (with Text Patch) play-through](https://img.youtube.com/vi/te-6wnrZe9M/0.jpg)](https://www.youtube.com/watch?v=te-6wnrZe9M)
 
 ## More Information ##
 
